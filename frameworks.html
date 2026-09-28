@@ -7,24 +7,14 @@
   <meta name="description" content="Directory of current and archived FlowFirst framework and strategy documents." />
   <style>
     :root{--bg:#f6f8fb;--card:#fff;--ink:#152033;--muted:#617087;--line:#dfe5ec;--accent:#0f6b5b;--accent-soft:#eaf5f2;--archive:#7a5c18;--archive-soft:#fbf3dc}
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-    .wrap{max-width:980px;margin:0 auto;padding:56px 22px 72px}
-    .eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
-    h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.06;margin:.45rem 0 1rem}
-    .lead{max-width:760px;color:var(--muted);font-size:1.08rem;margin:0 0 2rem}
-    .note{background:var(--accent-soft);border:1px solid #cfe8e2;border-radius:14px;padding:16px 18px;margin:0 0 32px}
-    .section{margin-top:36px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:16px}.section-head h2{font-size:1.45rem;margin:0}.section-head p{margin:0;color:var(--muted);font-size:.92rem}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-    .card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 5px 18px rgba(21,32,51,.04);transition:.18s ease}
-    .card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(21,32,51,.08);border-color:#c8d3dd}
-    .tag{display:inline-block;font-size:.74rem;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:5px 9px;border-radius:999px;margin-bottom:12px}
-    .tag.archive{color:var(--archive);background:var(--archive-soft)}
-    .card h3{font-size:1.18rem;margin:0 0 8px}.desc{color:var(--muted);font-size:.95rem;margin:0 0 14px}.meta{color:var(--muted);font-size:.82rem;margin-bottom:16px}.open{font-weight:700;color:var(--accent)}
-    .archive-card{opacity:.94}.archive-card .open{color:var(--archive)}
-    .footer{margin-top:42px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
-    .home{display:inline-block;margin-top:14px;color:var(--accent);text-decoration:none;font-weight:700}
-    .empty,.error{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;color:var(--muted)}
-    @media(max-width:680px){.section-head{display:block}.section-head p{margin-top:5px}}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+    .wrap{max-width:980px;margin:0 auto;padding:56px 22px 72px}.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
+    h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.06;margin:.45rem 0 1rem}.lead{max-width:760px;color:var(--muted);font-size:1.08rem;margin:0 0 2rem}
+    .note{background:var(--accent-soft);border:1px solid #cfe8e2;border-radius:14px;padding:16px 18px;margin:0 0 32px}.section{margin-top:36px}.section-head{margin-bottom:16px}.section-head h2{font-size:1.45rem;margin:0}.section-head p{margin:5px 0 0;color:var(--muted);font-size:.92rem}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 5px 18px rgba(21,32,51,.04);transition:.18s ease}.card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(21,32,51,.08);border-color:#c8d3dd}
+    .tag{display:inline-block;font-size:.74rem;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:5px 9px;border-radius:999px;margin-bottom:12px}.tag.archive{color:var(--archive);background:var(--archive-soft)}
+    .card h3{font-size:1.18rem;margin:0 0 8px}.desc{color:var(--muted);font-size:.95rem;margin:0 0 14px}.meta{color:var(--muted);font-size:.82rem;margin-bottom:16px}.open{font-weight:700;color:var(--accent)}.archive-card{opacity:.95}.archive-card .open{color:var(--archive)}
+    .footer{margin-top:42px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.home{display:inline-block;margin-top:14px;color:var(--accent);text-decoration:none;font-weight:700}
   </style>
 </head>
 <body>
@@ -34,64 +24,46 @@
     <p class="lead">A central directory of FlowFirst strategy, operating, marketing and stakeholder documents — including both current frameworks and previous versions retained for reference.</p>
     <div class="note"><strong>Versioned library:</strong> current documents remain prominent, while superseded and archived versions stay accessible so stakeholders can see how our thinking and decisions evolved over time.</div>
 
-    <section class="section" aria-labelledby="current-title">
-      <div class="section-head"><div><h2 id="current-title">Current Frameworks</h2><p>Latest working versions.</p></div></div>
-      <div id="current-grid" class="grid" aria-label="Current framework directory"></div>
+    <section class="section">
+      <div class="section-head"><h2>Current Frameworks</h2><p>Latest working versions.</p></div>
+      <div class="grid">
+        <a class="card" href="/flowfirst-brand-architecture-2026-09-29.html">
+          <span class="tag">Brand · Published</span>
+          <h3>FlowFirst Brand Architecture & Go-to-Market Guide</h3>
+          <p class="desc">Updated brand architecture: FlowFirst master ecosystem, ThinkFlowFirst education, FlowCare navigation, FlowClub selected physical locations, FlowFirst Certified Partners, program families, NOVO/IGDS, and RAHO origin story.</p>
+          <div class="meta">Published 2026-09-29</div><span class="open">Open framework →</span>
+        </a>
+        <a class="card" href="/demand-acquisition-framework.html">
+          <span class="tag">Acquisition · Published</span>
+          <h3>Demand Acquisition Framework</h3>
+          <p class="desc">Performance-based acquisition, strategic channel partnerships, selective funded acquisition, FlowFirst-owned acquisition, and the implementation playbook.</p>
+          <div class="meta">Published 2026-09-28</div><span class="open">Open framework →</span>
+        </a>
+        <a class="card" href="/cpql-agency-pilot-implementation-plan.html">
+          <span class="tag">Acquisition · Published</span>
+          <h3>CPQL Agency Pilot Implementation Plan</h3>
+          <p class="desc">30-day operating plan for testing performance-based lead-generation partners for Cambodia stroke recovery, including qualification rules, agency shortlist, scorecard, outreach brief, and scale/stop decisions.</p>
+          <div class="meta">Published 2026-09-28</div><span class="open">Open framework →</span>
+        </a>
+      </div>
     </section>
 
-    <section class="section" aria-labelledby="archive-title">
-      <div class="section-head"><div><h2 id="archive-title">Previous & Archived Versions</h2><p>Superseded documents retained for history and reference.</p></div></div>
-      <div id="archive-grid" class="grid" aria-label="Archived framework directory"></div>
+    <section class="section">
+      <div class="section-head"><h2>Previous & Archived Versions</h2><p>Superseded documents retained for history and reference.</p></div>
+      <div class="grid">
+        <a class="card archive-card" href="/flowfirst-brand-architecture-guide.html">
+          <span class="tag archive">Brand · Superseded</span>
+          <h3>FlowFirst Brand Architecture & Go-to-Market Guide — Previous Version</h3>
+          <p class="desc">Superseded 28 September 2026 version retained for reference. This version used FlowFirst Connect for navigation and FlowFirst Center for physical locations before FlowCare and FlowClub were restored into the architecture.</p>
+          <div class="meta">Version date 2026-09-28</div><span class="open">Open previous version →</span>
+        </a>
+      </div>
     </section>
 
     <div class="footer">
-      <div>Statuses are taken directly from the central <code>frameworks.json</code> registry.</div>
+      <div>Current and archived entries are maintained together whenever framework documents are updated.</div>
       <a class="home" href="/">← Back to Think Flow First</a>
     </div>
   </main>
-
-  <script>
-    const currentGrid = document.getElementById('current-grid');
-    const archiveGrid = document.getElementById('archive-grid');
-    const escapeHtml = (value = '') => String(value)
-      .replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
-      .replaceAll('"','&quot;').replaceAll("'",'&#039;');
-
-    const byDate = (a,b) => String(b.date_published || '').localeCompare(String(a.date_published || ''));
-
-    function renderCard(item, archived=false){
-      const status = item.status || (archived ? 'Archived' : 'Published');
-      return `
-        <a class="card ${archived ? 'archive-card' : ''}" href="${escapeHtml(item.url)}">
-          <span class="tag ${archived ? 'archive' : ''}">${escapeHtml(item.category || 'Framework')} · ${escapeHtml(status)}</span>
-          <h3>${escapeHtml(item.title)}</h3>
-          <p class="desc">${escapeHtml(item.description || '')}</p>
-          <div class="meta">${archived ? 'Version date' : 'Published'} ${escapeHtml(item.date_published || '')}</div>
-          <span class="open">${archived ? 'Open previous version' : 'Open framework'} →</span>
-        </a>`;
-    }
-
-    fetch('/frameworks.json', { cache: 'no-store' })
-      .then(response => {
-        if (!response.ok) throw new Error('Unable to load framework registry');
-        return response.json();
-      })
-      .then(items => {
-        const current = items.filter(item => ['published','current','active'].includes((item.status || '').toLowerCase())).sort(byDate);
-        const archived = items.filter(item => ['superseded','archived','previous','retired'].includes((item.status || '').toLowerCase())).sort(byDate);
-
-        currentGrid.innerHTML = current.length
-          ? current.map(item => renderCard(item,false)).join('')
-          : '<div class="empty">No current frameworks are listed yet.</div>';
-
-        archiveGrid.innerHTML = archived.length
-          ? archived.map(item => renderCard(item,true)).join('')
-          : '<div class="empty">No previous framework versions are archived yet.</div>';
-      })
-      .catch(() => {
-        currentGrid.innerHTML = '<div class="error">The framework registry could not be loaded. Please refresh this page.</div>';
-        archiveGrid.innerHTML = '';
-      });
-  </script>
 </body>
 </html>
