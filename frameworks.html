@@ -17,9 +17,10 @@
     .card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 5px 18px rgba(21,32,51,.04);transition:.18s ease}
     .card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(21,32,51,.08);border-color:#c8d3dd}
     .tag{display:inline-block;font-size:.74rem;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:5px 9px;border-radius:999px;margin-bottom:12px}
-    h2{font-size:1.18rem;margin:0 0 8px}.desc{color:var(--muted);font-size:.95rem;margin:0 0 18px}.open{font-weight:700;color:var(--accent)}
+    h2{font-size:1.18rem;margin:0 0 8px}.desc{color:var(--muted);font-size:.95rem;margin:0 0 14px}.meta{color:var(--muted);font-size:.82rem;margin-bottom:16px}.open{font-weight:700;color:var(--accent)}
     .footer{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
     .home{display:inline-block;margin-top:14px;color:var(--accent);text-decoration:none;font-weight:700}
+    .empty,.error{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;color:var(--muted)}
   </style>
 </head>
 <body>
@@ -27,21 +28,50 @@
     <div class="eyebrow">Think Flow First</div>
     <h1>FlowFirst Framework Library</h1>
     <p class="lead">A central directory of FlowFirst strategy, operating, marketing and stakeholder framework pages deployed on this site.</p>
-    <div class="note"><strong>Living library:</strong> new framework pages will be added here as they are approved and deployed.</div>
+    <div class="note"><strong>Living library:</strong> this page is generated from the central framework registry. New published documents appear here when they are added to <code>frameworks.json</code>.</div>
 
-    <section class="grid" aria-label="Framework directory">
-      <a class="card" href="/demand-acquisition-framework.html">
-        <span class="tag">Acquisition</span>
-        <h2>Demand Acquisition Framework</h2>
-        <p class="desc">Performance-based acquisition, strategic channel partnerships, selective funded acquisition, FlowFirst-owned acquisition, and the implementation playbook.</p>
-        <span class="open">Open framework →</span>
-      </a>
-    </section>
+    <section id="framework-grid" class="grid" aria-label="Framework directory"></section>
 
     <div class="footer">
-      <div>Only deployed framework pages are listed here. Additional documents will appear as they are published.</div>
+      <div>Only documents marked as published in the registry are shown here.</div>
       <a class="home" href="/">← Back to Think Flow First</a>
     </div>
   </main>
+
+  <script>
+    const grid = document.getElementById('framework-grid');
+    const escapeHtml = (value = '') => String(value)
+      .replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
+      .replaceAll('"','&quot;').replaceAll("'",'&#039;');
+
+    fetch('/frameworks.json', { cache: 'no-store' })
+      .then(response => {
+        if (!response.ok) throw new Error('Unable to load framework registry');
+        return response.json();
+      })
+      .then(items => {
+        const published = items
+          .filter(item => (item.status || '').toLowerCase() === 'published')
+          .sort((a,b) => String(b.date_published || '').localeCompare(String(a.date_published || '')));
+
+        if (!published.length) {
+          grid.innerHTML = '<div class="empty">No published frameworks are listed yet.</div>';
+          return;
+        }
+
+        grid.innerHTML = published.map(item => `
+          <a class="card" href="${escapeHtml(item.url)}">
+            <span class="tag">${escapeHtml(item.category || 'Framework')}</span>
+            <h2>${escapeHtml(item.title)}</h2>
+            <p class="desc">${escapeHtml(item.description || '')}</p>
+            <div class="meta">Published ${escapeHtml(item.date_published || '')}</div>
+            <span class="open">Open framework →</span>
+          </a>
+        `).join('');
+      })
+      .catch(() => {
+        grid.innerHTML = '<div class="error">The framework registry could not be loaded. Please refresh this page.</div>';
+      });
+  </script>
 </body>
 </html>
