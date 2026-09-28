@@ -4,45 +4,72 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FlowFirst Framework Library</title>
-  <meta name="description" content="Directory of FlowFirst framework and strategy documents." />
+  <meta name="description" content="Directory of current and archived FlowFirst framework and strategy documents." />
   <style>
-    :root{--bg:#f6f8fb;--card:#fff;--ink:#152033;--muted:#617087;--line:#dfe5ec;--accent:#0f6b5b;--accent-soft:#eaf5f2}
+    :root{--bg:#f6f8fb;--card:#fff;--ink:#152033;--muted:#617087;--line:#dfe5ec;--accent:#0f6b5b;--accent-soft:#eaf5f2;--archive:#7a5c18;--archive-soft:#fbf3dc}
     *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
     .wrap{max-width:980px;margin:0 auto;padding:56px 22px 72px}
     .eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
     h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.06;margin:.45rem 0 1rem}
     .lead{max-width:760px;color:var(--muted);font-size:1.08rem;margin:0 0 2rem}
-    .note{background:var(--accent-soft);border:1px solid #cfe8e2;border-radius:14px;padding:16px 18px;margin:0 0 28px}
+    .note{background:var(--accent-soft);border:1px solid #cfe8e2;border-radius:14px;padding:16px 18px;margin:0 0 32px}
+    .section{margin-top:36px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:16px}.section-head h2{font-size:1.45rem;margin:0}.section-head p{margin:0;color:var(--muted);font-size:.92rem}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
     .card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 5px 18px rgba(21,32,51,.04);transition:.18s ease}
     .card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(21,32,51,.08);border-color:#c8d3dd}
     .tag{display:inline-block;font-size:.74rem;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:5px 9px;border-radius:999px;margin-bottom:12px}
-    h2{font-size:1.18rem;margin:0 0 8px}.desc{color:var(--muted);font-size:.95rem;margin:0 0 14px}.meta{color:var(--muted);font-size:.82rem;margin-bottom:16px}.open{font-weight:700;color:var(--accent)}
-    .footer{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+    .tag.archive{color:var(--archive);background:var(--archive-soft)}
+    .card h3{font-size:1.18rem;margin:0 0 8px}.desc{color:var(--muted);font-size:.95rem;margin:0 0 14px}.meta{color:var(--muted);font-size:.82rem;margin-bottom:16px}.open{font-weight:700;color:var(--accent)}
+    .archive-card{opacity:.94}.archive-card .open{color:var(--archive)}
+    .footer{margin-top:42px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
     .home{display:inline-block;margin-top:14px;color:var(--accent);text-decoration:none;font-weight:700}
     .empty,.error{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;color:var(--muted)}
+    @media(max-width:680px){.section-head{display:block}.section-head p{margin-top:5px}}
   </style>
 </head>
 <body>
   <main class="wrap">
     <div class="eyebrow">Think Flow First</div>
     <h1>FlowFirst Framework Library</h1>
-    <p class="lead">A central directory of FlowFirst strategy, operating, marketing and stakeholder framework pages deployed on this site.</p>
-    <div class="note"><strong>Living library:</strong> this page is generated from the central framework registry. New published documents appear here when they are added to <code>frameworks.json</code>.</div>
+    <p class="lead">A central directory of FlowFirst strategy, operating, marketing and stakeholder documents — including both current frameworks and previous versions retained for reference.</p>
+    <div class="note"><strong>Versioned library:</strong> current documents remain prominent, while superseded and archived versions stay accessible so stakeholders can see how our thinking and decisions evolved over time.</div>
 
-    <section id="framework-grid" class="grid" aria-label="Framework directory"></section>
+    <section class="section" aria-labelledby="current-title">
+      <div class="section-head"><div><h2 id="current-title">Current Frameworks</h2><p>Latest working versions.</p></div></div>
+      <div id="current-grid" class="grid" aria-label="Current framework directory"></div>
+    </section>
+
+    <section class="section" aria-labelledby="archive-title">
+      <div class="section-head"><div><h2 id="archive-title">Previous & Archived Versions</h2><p>Superseded documents retained for history and reference.</p></div></div>
+      <div id="archive-grid" class="grid" aria-label="Archived framework directory"></div>
+    </section>
 
     <div class="footer">
-      <div>Only documents marked as published in the registry are shown here.</div>
+      <div>Statuses are taken directly from the central <code>frameworks.json</code> registry.</div>
       <a class="home" href="/">← Back to Think Flow First</a>
     </div>
   </main>
 
   <script>
-    const grid = document.getElementById('framework-grid');
+    const currentGrid = document.getElementById('current-grid');
+    const archiveGrid = document.getElementById('archive-grid');
     const escapeHtml = (value = '') => String(value)
       .replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
       .replaceAll('"','&quot;').replaceAll("'",'&#039;');
+
+    const byDate = (a,b) => String(b.date_published || '').localeCompare(String(a.date_published || ''));
+
+    function renderCard(item, archived=false){
+      const status = item.status || (archived ? 'Archived' : 'Published');
+      return `
+        <a class="card ${archived ? 'archive-card' : ''}" href="${escapeHtml(item.url)}">
+          <span class="tag ${archived ? 'archive' : ''}">${escapeHtml(item.category || 'Framework')} · ${escapeHtml(status)}</span>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p class="desc">${escapeHtml(item.description || '')}</p>
+          <div class="meta">${archived ? 'Version date' : 'Published'} ${escapeHtml(item.date_published || '')}</div>
+          <span class="open">${archived ? 'Open previous version' : 'Open framework'} →</span>
+        </a>`;
+    }
 
     fetch('/frameworks.json', { cache: 'no-store' })
       .then(response => {
@@ -50,27 +77,20 @@
         return response.json();
       })
       .then(items => {
-        const published = items
-          .filter(item => (item.status || '').toLowerCase() === 'published')
-          .sort((a,b) => String(b.date_published || '').localeCompare(String(a.date_published || '')));
+        const current = items.filter(item => ['published','current','active'].includes((item.status || '').toLowerCase())).sort(byDate);
+        const archived = items.filter(item => ['superseded','archived','previous','retired'].includes((item.status || '').toLowerCase())).sort(byDate);
 
-        if (!published.length) {
-          grid.innerHTML = '<div class="empty">No published frameworks are listed yet.</div>';
-          return;
-        }
+        currentGrid.innerHTML = current.length
+          ? current.map(item => renderCard(item,false)).join('')
+          : '<div class="empty">No current frameworks are listed yet.</div>';
 
-        grid.innerHTML = published.map(item => `
-          <a class="card" href="${escapeHtml(item.url)}">
-            <span class="tag">${escapeHtml(item.category || 'Framework')}</span>
-            <h2>${escapeHtml(item.title)}</h2>
-            <p class="desc">${escapeHtml(item.description || '')}</p>
-            <div class="meta">Published ${escapeHtml(item.date_published || '')}</div>
-            <span class="open">Open framework →</span>
-          </a>
-        `).join('');
+        archiveGrid.innerHTML = archived.length
+          ? archived.map(item => renderCard(item,true)).join('')
+          : '<div class="empty">No previous framework versions are archived yet.</div>';
       })
       .catch(() => {
-        grid.innerHTML = '<div class="error">The framework registry could not be loaded. Please refresh this page.</div>';
+        currentGrid.innerHTML = '<div class="error">The framework registry could not be loaded. Please refresh this page.</div>';
+        archiveGrid.innerHTML = '';
       });
   </script>
 </body>
