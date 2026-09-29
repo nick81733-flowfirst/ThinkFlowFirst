@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Think Flow First — Hook Family Map</title>
+  <meta name="description" content="The official Think Flow First Hook Family Map: a practical system for creating consistent campaign hooks across prevention, recovery, longevity and health decisions." />
+  <style>
+    :root{--bg:#f5f7f9;--card:#fff;--ink:#13202d;--muted:#637181;--line:#dde4e9;--accent:#106a59;--accent2:#dcefe9;--dark:#0d2e28;--warn:#8b5b13;--warnbg:#fff7e8}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.58}
+    a{color:inherit}.wrap{max-width:1100px;margin:auto;padding:48px 22px 80px}.topnav{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:50px;font-size:.9rem}.brand{font-weight:800;letter-spacing:.04em}.topnav a{text-decoration:none;color:var(--muted);font-weight:650}
+    .hero{background:linear-gradient(135deg,#0c3c34,#116c5a);color:white;border-radius:28px;padding:clamp(30px,6vw,64px);box-shadow:0 18px 50px rgba(13,46,40,.14)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;font-weight:800;opacity:.78}.hero h1{font-size:clamp(2.4rem,7vw,5.4rem);line-height:.95;letter-spacing:-.045em;margin:.5rem 0 1.15rem;max-width:880px}.hero .lead{font-size:clamp(1.05rem,2.1vw,1.35rem);max-width:800px;color:#e5f1ee;margin:0}.heroquote{margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.22);font-size:1.18rem;font-weight:700}
+    .intro{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;margin:28px 0}.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}.panel h2,.panel h3{margin-top:0}.panel p:last-child{margin-bottom:0}.principle{background:var(--accent2);border-color:#c6e3da}.principle strong{color:var(--dark)}
+    .section{margin-top:54px}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:20px}.sectionhead h2{font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.025em;margin:0}.sectionhead p{max-width:620px;color:var(--muted);margin:0}.zonegrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.zone{border-radius:20px;padding:26px;background:white;border:1px solid var(--line)}.zone .num{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:800}.zone h3{font-size:1.55rem;margin:.35rem 0 .55rem}.zone p{color:var(--muted);margin-bottom:0}
+    .families{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.family{background:white;border:1px solid var(--line);border-radius:20px;padding:24px;position:relative;overflow:hidden}.family:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}.family .kicker{font-size:.74rem;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.1em}.family h3{font-size:1.3rem;margin:.38rem 0 .65rem}.purpose{color:var(--muted);font-size:.95rem}.formula{margin:16px 0 12px;padding:11px 13px;border-radius:10px;background:#f3f7f6;font-size:.9rem}.example{font-size:1.02rem;font-weight:700;margin:8px 0}.example:before{content:"“"}.example:after{content:"”"}.note{color:var(--muted);font-size:.82rem;margin-top:12px}.locked{display:inline-block;background:var(--accent2);color:var(--dark);font-size:.7rem;font-weight:800;border-radius:999px;padding:4px 8px;margin-left:6px;vertical-align:2px}
+    .angles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.angle{background:var(--dark);color:white;border-radius:16px;padding:20px}.angle b{display:block;font-size:1.05rem;margin-bottom:6px}.angle span{font-size:.88rem;color:#cfe2dd}.guardrail{background:var(--warnbg);border:1px solid #f0d9aa;border-radius:20px;padding:26px}.guardrail h3{color:var(--warn);margin-top:0}.footer{margin-top:54px;border-top:1px solid var(--line);padding-top:24px;color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:var(--accent);font-weight:700;text-decoration:none}
+    @media(max-width:800px){.wrap{padding:26px 16px 54px}.topnav{margin-bottom:28px}.intro,.zonegrid,.families{grid-template-columns:1fr}.angles{grid-template-columns:1fr 1fr}.hero{border-radius:22px;padding:30px 23px}.section{margin-top:42px}.sectionhead{display:block}.sectionhead p{margin-top:8px}.family{padding:21px}}
+    @media(max-width:470px){.angles{grid-template-columns:1fr}.topnav .library{display:none}}
+    @media print{body{background:white}.wrap{max-width:none}.topnav{display:none}.hero{box-shadow:none}.family,.panel,.zone{break-inside:avoid}.families{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <nav class="topnav"><div class="brand">THINK FLOW FIRST</div><a class="library" href="/frameworks.html">Framework Library →</a></nav>
+
+  <header class="hero">
+    <div class="eyebrow">Marketing & Messaging Framework · 29 September 2026</div>
+    <h1>The Hook Family Map</h1>
+    <p class="lead">A shared language for creating hundreds of Think Flow First hooks without sounding random, repetitive or off-brand. Choose the family first. Then write the hook.</p>
+    <div class="heroquote">One brand idea. Many entry points. Think Flow First.</div>
+  </header>
+
+  <section class="intro">
+    <div class="panel">
+      <h2>What is a hook family?</h2>
+      <p>A hook family is not one headline. It is a repeatable <strong>way into the conversation</strong>. Each family starts from a different thought already happening in the audience's mind — fear, curiosity, a decision, stalled recovery, prevention, hope, longevity or the search for another option.</p>
+      <p>The exact words can change by condition, market and channel while the underlying structure stays recognisably Think Flow First.</p>
+    </div>
+    <div class="panel principle">
+      <h3>The operating rule</h3>
+      <p><strong>Do not start by asking, “What ad should we write?”</strong></p>
+      <p>Start with: <strong>Who are we speaking to, what are they thinking right now, and which hook family matches that moment?</strong></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sectionhead"><div><h2>Two big audience zones</h2></div><p>Almost every hook we create sits primarily on one side of this divide. The creative family then determines the angle.</p></div>
+    <div class="zonegrid">
+      <article class="zone"><div class="num">Zone A</div><h3>Stay Well</h3><p>People thinking about prevention, risk, longevity, healthspan, ageing and staying independent before a major event happens.</p></article>
+      <article class="zone"><div class="num">Zone B</div><h3>Get More Help</h3><p>People already dealing with stroke, recovery, chronic problems, stalled progress, exhausted options or a major treatment decision.</p></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sectionhead"><div><h2>20 core hook families</h2></div><p>These are the main creative families developed so far. They are building blocks, not rigid scripts.</p></div>
+    <div class="families">
+
+      <article class="family"><div class="kicker">01 · Master Adaptable</div><h3>Think Flow First. For ___.</h3><p class="purpose">The simplest brand extension. It connects the master idea directly to a condition, goal or life stage.</p><div class="formula">Formula: <strong>Think Flow First. For [condition / goal].</strong></div><p class="example">Think Flow First. For Recovery.</p><p class="example">Think Flow First. For Longevity.</p></article>
+
+      <article class="family"><div class="kicker">02 · Decision Point</div><h3>Before…</h3><p class="purpose">Intercepts people immediately before a consequential health decision.</p><div class="formula">Formula: <strong>Before [decision/action], Think Flow First.</strong></div><p class="example">Before you travel overseas for treatment, Think Flow First.</p><p class="example">Before surgery. Before another specialist. Before giving up. Think Flow First.</p></article>
+
+      <article class="family"><div class="kicker">03 · Medical Travel</div><h3>Overseas Treatment</h3><p class="purpose">Challenges the assumption that crossing a border automatically means receiving the best or most suitable care.</p><div class="formula">Formula: <strong>[Reframe overseas treatment]. Think Flow First.</strong></div><p class="example">Not all overseas treatment is the same. Think Flow First.</p><p class="example">Thinking of travelling overseas for treatment? Think Flow First — before you book the flight.</p></article>
+
+      <article class="family"><div class="kicker">04 · Prevention</div><h3>This Could Happen to You</h3><p class="purpose">Makes future risk feel personally relevant and moves the conversation toward prevention.</p><div class="formula">Formula: <strong>[Risk can happen]. Learn how to prevent it.</strong></div><p class="example">This could happen to you. Learn how to prevent it.<span class="locked">LOCKED</span></p></article>
+
+      <article class="family"><div class="kicker">05 · Recognition</div><h3>Signs & Symptoms</h3><p class="purpose">Starts with something the audience can recognise in themselves or a loved one.</p><div class="formula">Formula: <strong>[Sign 1]? [Sign 2]? What could your circulation be telling you?</strong></div><p class="example">Cold feet? Slow healing? What could your circulation be telling you?</p></article>
+
+      <article class="family"><div class="kicker">06 · Reframe</div><h3>The Flow Problem</h3><p class="purpose">Moves attention from separate disease labels toward a shared circulation-first question.</p><div class="formula">Formula: <strong>What do [apparently different problems] have in common?</strong></div><p class="example">What do stroke, heart disease, diabetes and wrinkles have in common? Think Flow First.</p></article>
+
+      <article class="family"><div class="kicker">07 · Missing Piece</div><h3>What Are We Overlooking?</h3><p class="purpose">Creates curiosity by suggesting that the usual way of looking at the problem may be incomplete.</p><div class="formula">Formula: <strong>What if [important missing perspective]?</strong></div><p class="example">What if we have been looking at health one disease at a time — while overlooking flow?</p></article>
+
+      <article class="family"><div class="kicker">08 · Discovery</div><h3>A New Approach</h3><p class="purpose">Invites people to discover something unfamiliar without requiring an aggressive treatment claim.</p><div class="formula">Formula: <strong>What if there is a new approach to [goal] you may never have heard of?</strong></div><p class="example">What if there is a new approach to stroke recovery you may never have heard of? Wouldn't you want to know?</p></article>
+
+      <article class="family"><div class="kicker">09 · Wordplay</div><h3>The “Solution” Hook</h3><p class="purpose">Uses “solution” as curiosity language while also playing on the idea of an infused solution.</p><div class="formula">Formula: <strong>What if there is a “solution” to [challenge] you have never heard of?</strong></div><p class="example">What if there is a “solution” to stroke recovery you have never heard of?</p><p class="note">Use quotation marks deliberately. Avoid presenting an unproven therapy as a guaranteed medical solution.</p></article>
+
+      <article class="family"><div class="kicker">10 · Stalled Progress</div><h3>Plateau</h3><p class="purpose">Speaks directly to people who improved at first but now feel recovery has slowed or stopped.</p><div class="formula">Formula: <strong>Has [recovery/progress] slowed — or stopped?</strong></div><p class="example">Has your stroke recovery slowed down — or stopped altogether?</p></article>
+
+      <article class="family"><div class="kicker">11 · Journey</div><h3>Recovery Is Not Over</h3><p class="purpose">Separates emergency treatment from the longer recovery journey that follows.</p><div class="formula">Formula: <strong>The [acute event] may be over. The recovery journey isn't.</strong></div><p class="example">The emergency may be over. The recovery journey isn't.</p></article>
+
+      <article class="family"><div class="kicker">12 · Exhausted Options</div><h3>What Else?</h3><p class="purpose">Meets people who feel they have already tried everything and are looking for another path to discuss.</p><div class="formula">Formula: <strong>Have we done everything possible? What else can be explored?</strong></div><p class="example">Think Flow First, not Last.</p><p class="example">What else can be done?</p></article>
+
+      <article class="family"><div class="kicker">13 · Caregiver</div><h3>The Family's Question</h3><p class="purpose">Addresses spouses, children and caregivers whose lives changed alongside the patient's.</p><div class="formula">Formula: <strong>Your loved one [event]. What do you do when [next challenge]?</strong></div><p class="example">Your loved one had a stroke. What do you do when recovery slows?</p></article>
+
+      <article class="family"><div class="kicker">14 · Human Outcome</div><h3>The Person Behind the Condition</h3><p class="purpose">Moves away from clinical labels and toward what the person actually wants back in daily life.</p><div class="formula">Formula: <strong>If you could regain one thing, what would it be?</strong></div><p class="example">If you could regain one thing after your stroke, what would it be?</p></article>
+
+      <article class="family"><div class="kicker">15 · Specific Function</div><h3>One Thing Didn't Recover</h3><p class="purpose">Targets a concrete functional frustration rather than a broad disease label.</p><div class="formula">Formula: <strong>[Function A] improved. [Function B] did not. What now?</strong></div><p class="example">The leg improved. The hand did not. What now?</p></article>
+
+      <article class="family"><div class="kicker">16 · Time</div><h3>Is It Too Late?</h3><p class="purpose">Addresses people months or years after an event who assume the window for further improvement has closed.</p><div class="formula">Formula: <strong>Your [event] happened [time] ago. Is it too late to explore more?</strong></div><p class="example">Your stroke happened two years ago. Is it too late to explore more?</p></article>
+
+      <article class="family"><div class="kicker">17 · Both-And</div><h3>Alongside Care</h3><p class="purpose">Positions Flow First thinking as something that can complement established care instead of framing every choice as either/or.</p><div class="formula">Formula: <strong>Keep doing what helps. Ask what else may support recovery.</strong></div><p class="example">It doesn't always have to be either/or. Think Flow First.</p></article>
+
+      <article class="family"><div class="kicker">18 · Longevity</div><h3>Healthspan</h3><p class="purpose">Connects circulation thinking to ageing well, independence and quality of life.</p><div class="formula">Formula: <strong>[Longevity contrast]. Think Flow First.</strong></div><p class="example">Lifespan vs Healthspan. Think Flow First.</p><p class="example">Above all else, Think Flow First.</p></article>
+
+      <article class="family"><div class="kicker">19 · Biology Made Simple</div><h3>Trillions of Cells</h3><p class="purpose">Explains the brand idea in one memorable biological picture: many cells, one circulation system serving them.</p><div class="formula">Formula: <strong>[Many cells]. [One circulation]. Think Flow First.</strong></div><p class="example">Trillions of cells. One circulation. Think Flow First.</p><p class="example">Think Flow First. For the health of your trillion cells.</p></article>
+
+      <article class="family"><div class="kicker">20 · Brand Philosophy</div><h3>It's All About Flow</h3><p class="purpose">The broadest emotional and philosophical expression of the brand, useful for brand films, opening statements and awareness.</p><div class="formula">Formula: <strong>[Simple belief about flow]. Think Flow First.</strong></div><p class="example">It's all about flow. A good flow creates a good life. Think Flow First.</p><p class="example">We believe there is a better way towards health. Think Flow First.</p></article>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sectionhead"><div><h2>8 tactical hook angles</h2></div><p>These are the practical advertising lenses that can be layered onto the families above for almost any condition or campaign.</p></div>
+    <div class="angles">
+      <div class="angle"><b>1. Risk</b><span>Why should I care before anything happens?</span></div>
+      <div class="angle"><b>2. Recognition</b><span>Do I recognise myself or someone I love?</span></div>
+      <div class="angle"><b>3. Prevention</b><span>What might I do before the event?</span></div>
+      <div class="angle"><b>4. Explanation</b><span>Why should I think about flow?</span></div>
+      <div class="angle"><b>5. Evidence</b><span>What gives me reason to investigate further?</span></div>
+      <div class="angle"><b>6. Alongside Care</b><span>How can this fit with what I am already doing?</span></div>
+      <div class="angle"><b>7. Next Step</b><span>What simple action can I take now?</span></div>
+      <div class="angle"><b>8. Recovery</b><span>What if progress can still be pursued?</span></div>
+    </div>
+  </section>
+
+  <section class="section guardrail">
+    <h3>Public-facing health copy: one important guardrail</h3>
+    <p>Strong hooks should create <strong>attention, curiosity and a reason to ask questions</strong>. They should not turn emerging evidence, individual outcomes or a novel therapy into a guaranteed diagnosis, cure or treatment result. In public-facing copy, prefer language such as <strong>“approach,” “explore,” “support,” “learn,” “ask,”</strong> and <strong>“could”</strong> where the evidence does not justify a stronger claim.</p>
+  </section>
+
+  <section class="section">
+    <div class="panel principle">
+      <h2>How the team should use this map</h2>
+      <p><strong>1.</strong> Identify the audience moment: staying well or seeking more help. <strong>2.</strong> Pick one hook family that matches that moment. <strong>3.</strong> Add one tactical angle. <strong>4.</strong> Adapt the condition, goal or decision. <strong>5.</strong> End with the simplest appropriate Think Flow First call to action.</p>
+      <p>The objective is not to make every ad sound identical. It is to make every ad feel like it came from the <strong>same idea and the same brand</strong>.</p>
+    </div>
+  </section>
+
+  <footer class="footer"><div>Think Flow First · Hook Family Map · Working master version · 29 September 2026</div><div><a href="/frameworks.html">Framework Library</a> · <a href="/">Think Flow First</a></div></footer>
+</main>
+</body>
+</html>
