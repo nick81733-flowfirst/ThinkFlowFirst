@@ -1,151 +1,200 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FlowFirst Curiosity-Led Demand Funnel Framework</title>
-  <meta name="description" content="Stakeholder framework for FlowFirst's new curiosity-led demand acquisition approach and informational ThinkFlowFirst website role." />
-  <style>
-    :root{--ink:#102a43;--muted:#52606d;--line:#d9e2ec;--soft:#f5f8fb;--accent:#13795b;--accent2:#0b5cab;--warm:#fff8e8;--white:#fff}
-    *{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--white);line-height:1.68}
-    .wrap{max-width:980px;margin:auto;padding:42px 24px 82px}.eyebrow{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--accent)}
-    h1{font-size:clamp(2.25rem,6vw,4.5rem);line-height:1.02;margin:.35rem 0 1rem;letter-spacing:-.045em}h2{font-size:2rem;line-height:1.2;margin-top:3.4rem}h3{font-size:1.2rem;margin:1.7rem 0 .45rem}p{margin:.75rem 0;color:#243b53}.lead{font-size:1.24rem;max-width:820px;color:#334e68}
-    .callout{margin:1.8rem 0;padding:1.2rem 1.4rem;border-left:5px solid var(--accent);background:#eefbf6;border-radius:10px;font-weight:650}.warning{background:var(--warm);border-left-color:#d08b00}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:1.2rem 0}.card{border:1px solid var(--line);border-radius:14px;padding:1.2rem;background:var(--white)}.card .num{font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent2)}.card h3{margin:.35rem 0 .45rem}.card p{margin:0;font-size:.95rem;color:var(--muted)}
-    .flow{display:grid;grid-template-columns:1fr;gap:10px;margin:1.2rem 0}.stage{padding:1rem 1.1rem;border-radius:12px;border:1px solid var(--line);background:var(--soft)}.stage b{display:block;margin-bottom:.15rem}.public{border-left:5px solid #7b8794}.private{border-left:5px solid var(--accent2)}.owned{border-left:5px solid var(--accent)}
-    table{width:100%;border-collapse:collapse;margin:1rem 0 2rem;font-size:.96rem}th,td{padding:.82rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:var(--soft)}ul{padding-left:1.25rem}.small{font-size:.9rem;color:var(--muted)}
-    .quote{font-size:1.28rem;line-height:1.45;margin:1.5rem 0;padding:1.2rem 1.4rem;border-radius:14px;background:#f7fbff;border:1px solid #dcecf7;font-weight:700}.footer{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--muted)}
-    @media (min-width:760px){.flow{grid-template-columns:repeat(2,1fr)}}@media print{.wrap{max-width:none}.card,.stage{break-inside:avoid}}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>FlowFirst Curiosity-Led Demand Funnel Framework</title>
+<meta name="description" content="Master stakeholder framework for FlowFirst's curiosity-led demand strategy, rationale, examples, social-platform safety guardrails, website role and implementation principles." />
+<style>
+:root{--ink:#102a43;--muted:#52606d;--line:#d9e2ec;--soft:#f5f8fb;--accent:#13795b;--blue:#0b5cab;--amber:#b7791f;--red:#b42318;--green:#177245;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--white);line-height:1.68}
+.wrap{max-width:1020px;margin:auto;padding:44px 24px 84px}.eyebrow{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--accent)}
+h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.02;margin:.35rem 0 1rem;letter-spacing:-.045em}h2{font-size:2rem;line-height:1.2;margin-top:3.4rem}h3{font-size:1.2rem;margin:1.7rem 0 .45rem}p{margin:.76rem 0;color:#243b53}.lead{font-size:1.23rem;max-width:860px;color:#334e68}
+.callout{margin:1.7rem 0;padding:1.15rem 1.35rem;border-left:5px solid var(--accent);background:#eefbf6;border-radius:10px}.note{background:#f7fbff;border-left-color:var(--blue)}.warn{background:#fff8e8;border-left-color:var(--amber)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:16px;margin:1.2rem 0}.card{border:1px solid var(--line);border-radius:14px;padding:1.2rem;background:#fff}.card h3{margin:.2rem 0 .45rem}.card p{margin:0;font-size:.95rem;color:var(--muted)}.kicker{font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--blue)}
+.flow{display:grid;grid-template-columns:1fr;gap:10px;margin:1.2rem 0}.stage{padding:1rem 1.1rem;border-radius:12px;border:1px solid var(--line);background:var(--soft)}.stage b{display:block;margin-bottom:.15rem}.public{border-left:5px solid #7b8794}.private{border-left:5px solid var(--blue)}.owned{border-left:5px solid var(--accent)}
+table{width:100%;border-collapse:collapse;margin:1rem 0 2rem;font-size:.95rem}th,td{padding:.82rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:var(--soft)}ul{padding-left:1.25rem}.pill{display:inline-block;padding:.2rem .55rem;border-radius:999px;font-size:.78rem;font-weight:800}.low{background:#e9f7ef;color:var(--green)}.med{background:#fff3d6;color:#8a5a00}.high{background:#fdecea;color:var(--red)}
+.quote{font-size:1.28rem;line-height:1.45;margin:1.5rem 0;padding:1.2rem 1.4rem;border-radius:14px;background:#f7fbff;border:1px solid #dcecf7;font-weight:700}.sources a{color:var(--blue);word-break:break-word}.footer{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--muted)}
+@media (min-width:760px){.flow{grid-template-columns:repeat(2,1fr)}}@media print{.wrap{max-width:none}.card,.stage,tr{break-inside:avoid}}
+</style>
 </head>
 <body>
 <main class="wrap">
-  <div class="eyebrow">Stakeholder & Marketing Team Framework · 2 October 2026</div>
-  <h1>FlowFirst Curiosity-Led Demand Funnel Framework</h1>
-  <p class="lead">A new acquisition approach for FlowFirst: use public platforms to create curiosity and invite response, then move interested people into a FlowFirst-owned private conversation where we can understand their needs, educate them properly and guide them to relevant information and options.</p>
+<div class="eyebrow">Master Stakeholder & Marketing Framework · Updated 2 October 2026</div>
+<h1>FlowFirst Curiosity-Led Demand Funnel Framework</h1>
+<p class="lead">The definitive FlowFirst framework for why we are investigating a curiosity-led demand model, how the funnel should work, who else uses question-led health communication, how ThinkFlowFirst.com should evolve, and how to stay within major social-media platform rules.</p>
 
-  <div class="callout"><strong>New direction:</strong> public platforms do not need to explain NOVO, IGDS, RAHO or extraordinary treatment claims. Their job is to earn attention and a response. FlowFirst's job begins after the response.</div>
+<div class="callout"><strong>Core principle:</strong> public platforms do not need to carry our entire scientific or treatment story. Their job can be to raise a truthful, useful question that earns attention and invites engagement. FlowFirst then earns the right to continue through education, conversation and appropriate next steps.</div>
 
-  <h2>1. Why we are changing the funnel</h2>
-  <p>Our early Facebook, TikTok and YouTube experience suggests that health-related content can be difficult to distribute consistently, especially when content includes strong treatment claims, unusual outcomes, emerging therapies or language that may be interpreted as medical promises.</p>
-  <p>Rather than building the entire demand engine around getting complex treatment information approved by public platforms, FlowFirst can separate <strong>acquisition</strong> from <strong>education</strong>.</p>
-  <div class="quote">Public content creates curiosity. Private conversation creates understanding. FlowFirst-owned information builds trust.</div>
+<h2>1. Why we are changing the funnel</h2>
+<p>Our early experience with Facebook, TikTok and YouTube suggests that health-related content can be difficult to distribute consistently when it includes strong treatment claims, unusual outcomes, emerging therapies or language that may be interpreted as a medical promise.</p>
+<p>If the entire FlowFirst demand engine depends on public platforms approving complex treatment explanations, the acquisition system becomes fragile. We are therefore separating <strong>public acquisition</strong> from <strong>deeper education</strong>.</p>
+<div class="quote">The objective is not to hide a treatment. The objective is to put information in the right order.</div>
 
-  <h2>2. The new funnel</h2>
-  <div class="flow">
-    <div class="stage public"><b>1 — Public Hook</b>Short videos, posts, reels and creator content raise a question, challenge an assumption or introduce a different way of thinking.</div>
-    <div class="stage public"><b>2 — Call to Respond</b>The prospect comments or messages a simple keyword such as FLOW, RECOVERY, STROKE or INFO.</div>
-    <div class="stage private"><b>3 — Private Contact</b>FlowFirst replies directly by Messenger, WhatsApp, Telegram or another appropriate channel.</div>
-    <div class="stage private"><b>4 — Need Identification</b>We learn what the person is actually looking for: recovery, prevention, longevity, a specific condition, overseas treatment or another concern.</div>
-    <div class="stage owned"><b>5 — FlowFirst Education</b>We explain the FlowFirst idea first, then progressively introduce relevant science, evidence and emerging approaches.</div>
-    <div class="stage owned"><b>6 — Information Routing</b>The prospect is directed to the most relevant ThinkFlowFirst page, video, document, webinar or educational resource.</div>
-    <div class="stage owned"><b>7 — Consultation / Option</b>Only after education and qualification do we discuss suitable services, providers, locations, assessments or next steps.</div>
-    <div class="stage owned"><b>8 — Ongoing Relationship</b>FlowFirst retains the relationship, consent, source attribution, follow-up history and future education pathway.</div>
-  </div>
+<h2>2. What “curiosity-led” means — and what it does not mean</h2>
+<div class="grid">
+<div class="card"><div class="kicker">It means</div><h3>Ask a worthwhile question</h3><p>Use a truthful question, overlooked perspective or decision point to earn attention and invite a response.</p></div>
+<div class="card"><div class="kicker">It means</div><h3>Educate before selling</h3><p>Help people understand the problem, the FlowFirst perspective, evidence and relevant options in sequence.</p></div>
+<div class="card"><div class="kicker">It does not mean</div><h3>Hide a miracle</h3><p>Do not imply that we possess a secret cure, suppressed treatment or guaranteed breakthrough that platforms will not allow us to reveal.</p></div>
+<div class="card"><div class="kicker">It does not mean</div><h3>Move unsupported claims into DMs</h3><p>Private messaging is not a loophole. Deeper information should become more accurate and contextual, not more sensational.</p></div>
+</div>
 
-  <h2>3. What public content should do</h2>
-  <p>Public content should be designed to make the right person stop, think and respond. It does not need to carry the full scientific or clinical explanation.</p>
-  <div class="grid">
-    <div class="card"><div class="num">Hook Type 1</div><h3>Question</h3><p>“What if there is another way to think about recovery?”</p></div>
-    <div class="card"><div class="num">Hook Type 2</div><h3>Overlooked Factor</h3><p>“Most people focus on the diagnosis. What might they be overlooking?”</p></div>
-    <div class="card"><div class="num">Hook Type 3</div><h3>Decision Point</h3><p>“Before travelling overseas for treatment, Think Flow First.”</p></div>
-    <div class="card"><div class="num">Hook Type 4</div><h3>One More Question</h3><p>“Before accepting that nothing more can be done, there may be one more question worth asking.”</p></div>
-  </div>
-  <p>The public CTA can remain extremely simple: <strong>Comment FLOW</strong>, <strong>Message us</strong>, or <strong>Ask us what we mean</strong>.</p>
+<h2>3. The master funnel</h2>
+<div class="quote">CURIOSITY → EDUCATION → CONVERSATION → DISCOVERY → APPROPRIATE OPTION</div>
+<div class="flow">
+<div class="stage public"><b>1 — Public Hook</b>Short video, post, reel or creator content raises a truthful question or overlooked perspective.</div>
+<div class="stage public"><b>2 — Call to Respond</b>The viewer comments or messages a simple keyword such as FLOW, RECOVERY, STROKE or INFO.</div>
+<div class="stage private"><b>3 — Private Contact</b>FlowFirst replies through Messenger, WhatsApp, Telegram or another appropriate channel.</div>
+<div class="stage private"><b>4 — Need Identification</b>We learn what the person is actually trying to understand: recovery, prevention, longevity, a condition, overseas treatment or another concern.</div>
+<div class="stage owned"><b>5 — Education</b>We explain the FlowFirst perspective first, then relevant science, evidence and emerging approaches.</div>
+<div class="stage owned"><b>6 — Information Routing</b>The person is directed to the most relevant ThinkFlowFirst page, video, document, briefing or webinar.</div>
+<div class="stage owned"><b>7 — Discovery / Option</b>Only after education and qualification do we discuss suitable services, providers, locations, assessments or next steps.</div>
+<div class="stage owned"><b>8 — Ongoing Relationship</b>FlowFirst retains source attribution, consent, follow-up history and the educational relationship.</div>
+</div>
 
-  <div class="warning callout"><strong>Important:</strong> curiosity is not a license to make unsupported claims privately. The deeper conversation should become more accurate, not more sensational: distinguish established science, published evidence, observational experience, emerging hypotheses and unresolved questions.</div>
+<h2>4. Who else uses question-led or curiosity-led health communication?</h2>
+<p>The exact commercial model differs, but the underlying pattern — <strong>question → engagement → education</strong> — is well established in healthcare and public health.</p>
+<table>
+<thead><tr><th>Organisation / model</th><th>What they do</th><th>What FlowFirst can learn</th></tr></thead>
+<tbody>
+<tr><td><strong>AHRQ</strong><br>“Questions Are the Answer”</td><td>A U.S. public-education initiative encouraging patients and families to ask questions and participate actively in healthcare decisions.</td><td>A question itself can be the campaign proposition; curiosity can precede education.</td></tr>
+<tr><td><strong>NHS</strong><br>“It’s OK to Ask”</td><td>Encourages people to ask about benefits, risks and alternatives before making healthcare decisions.</td><td>Decision-point questions can empower rather than frighten the audience.</td></tr>
+<tr><td><strong>WHO Cambodia</strong></td><td>Used interactive quizzes and a Facebook chatbot in antibiotic-awareness work to engage people before deeper education.</td><td>Interaction and curiosity can be part of an educational acquisition mechanism.</td></tr>
+<tr><td><strong>Unbranded disease-awareness campaigns</strong></td><td>Healthcare and pharmaceutical organisations have long used condition-oriented campaigns that build awareness before an eventual treatment discussion.</td><td>There is established precedent for separating disease education from product promotion, provided commercial intent and evidence are handled responsibly.</td></tr>
+<tr><td><strong>TikTok health-marketing guidance</strong></td><td>TikTok recommends interactive formats such as polls and quizzes to encourage interaction and curiosity while requiring accurate health claims.</td><td>Curiosity itself is not the core problem; exaggerated or unsupported health claims are.</td></tr>
+</tbody>
+</table>
 
-  <h2>4. What changes for ThinkFlowFirst.com</h2>
-  <p>The website no longer needs to function primarily as a cold-traffic advertising landing page. It can become a <strong>FlowFirst informational and educational hub</strong> that people visit after they have already expressed interest.</p>
-  <p>This is strategically more interesting because the website can serve different audiences and different stages of understanding rather than forcing every visitor through one sales page.</p>
+<h2>5. What public content should do</h2>
+<p>Public content should make the right person stop, think and choose to engage. It does not need to carry the full scientific or clinical explanation.</p>
+<div class="grid">
+<div class="card"><div class="kicker">Question</div><h3>Ask differently</h3><p>“What if there is another way to think about recovery?”</p></div>
+<div class="card"><div class="kicker">Overlooked factor</div><h3>Challenge the frame</h3><p>“Most people focus on the diagnosis. What might they be overlooking?”</p></div>
+<div class="card"><div class="kicker">Decision point</div><h3>Intercept a decision</h3><p>“Before travelling overseas for treatment, Think Flow First.”</p></div>
+<div class="card"><div class="kicker">One more question</div><h3>Reopen possibility</h3><p>“Before accepting there are no more options, ask one more question.”</p></div>
+</div>
+<p>The CTA can remain simple: <strong>Comment FLOW</strong>, <strong>Message us</strong>, or <strong>Ask us what we mean</strong>.</p>
 
-  <table>
-    <thead><tr><th>Website role</th><th>Purpose</th></tr></thead>
-    <tbody>
-      <tr><td><strong>FlowFirst Education</strong></td><td>Explain the vascular-first / flow-first way of thinking in simple language.</td></tr>
-      <tr><td><strong>Condition Information</strong></td><td>Organize education around stroke recovery, longevity, prevention, cancer recovery, neurological recovery and other areas of interest.</td></tr>
-      <tr><td><strong>Emerging Science</strong></td><td>Explain nanobubbles, gasotransmitters, microcirculation and related research while clearly separating established knowledge from emerging ideas.</td></tr>
-      <tr><td><strong>Evidence Library</strong></td><td>Host publications, studies, RAHO materials, observational experience and explanatory documents with clear evidence labels.</td></tr>
-      <tr><td><strong>Videos & Briefings</strong></td><td>Host longer-form explanations that are difficult to communicate in short social posts.</td></tr>
-      <tr><td><strong>Available Options</strong></td><td>Explain what services, providers, programs or emerging approaches exist, where they are available and what questions a prospect should ask.</td></tr>
-      <tr><td><strong>Stakeholder Resources</strong></td><td>Provide shareable frameworks, partner documents and educational materials for doctors, referrers and collaborators.</td></tr>
-    </tbody>
-  </table>
+<h2>6. Social-platform safety: the key distinction</h2>
+<div class="warn callout"><strong>Curiosity is generally acceptable. Deception is not.</strong> The safe line is to raise a real question and provide useful education. The risky line is to imply a hidden cure or unbelievable result, then use comments, DMs or an external site to reveal claims that could not responsibly be said publicly.</div>
 
-  <h2>5. Website architecture: informational rather than promotional</h2>
-  <p>The site should progressively answer the questions that arise during a real conversation. It should feel more like a trusted knowledge library than a conventional treatment sales website.</p>
-  <div class="grid">
-    <div class="card"><div class="num">Layer A</div><h3>Understand Flow</h3><p>Why circulation, delivery, vascular health and the cellular environment matter.</p></div>
-    <div class="card"><div class="num">Layer B</div><h3>Understand the Problem</h3><p>Condition-specific education written for patients and families.</p></div>
-    <div class="card"><div class="num">Layer C</div><h3>Explore the Science</h3><p>Mechanisms, publications, emerging technologies and evidence categories.</p></div>
-    <div class="card"><div class="num">Layer D</div><h3>Explore the Options</h3><p>Programs, providers, technology, recovery pathways and consultation routes.</p></div>
-  </div>
+<table>
+<thead><tr><th>Platform</th><th>What matters for FlowFirst</th><th>Practical implication</th></tr></thead>
+<tbody>
+<tr><td><strong>TikTok</strong></td><td>Health/wellness guidance encourages interactive formats that create curiosity, while health claims must remain accurate and evidence-based. Additional regional restrictions may apply to healthcare advertising.</td><td>Question-led and quiz-style content can work. Avoid secret-cure, miracle, guaranteed-outcome and unsupported treatment language.</td></tr>
+<tr><td><strong>Facebook / Instagram (Meta)</strong></td><td>Health advertising is subject to misleading-claims rules and restrictions around sensitive personal attributes.</td><td>Prefer “For families navigating stroke recovery…” over “You had a stroke…”. Avoid fear-heavy or sensational promises.</td></tr>
+<tr><td><strong>YouTube</strong></td><td>Medical misinformation rules can also apply to external links and verbal directions to other sites.</td><td>Do not use YouTube as a teaser whose purpose is to route people to prohibited claims elsewhere. Off-platform content should remain educational and properly contextualised.</td></tr>
+<tr><td><strong>Google Ads / YouTube Ads</strong></td><td>Health is treated as a sensitive-interest category and some forms of personalised targeting are restricted.</td><td>Do not build the strategy around targeting or retargeting people because a platform infers that they personally have stroke, cancer, Parkinson’s or another sensitive condition.</td></tr>
+</tbody>
+</table>
 
-  <h2>6. Why this model may be stronger</h2>
-  <ul>
-    <li><strong>Platform resilience:</strong> the acquisition engine is less dependent on getting complex emerging-therapy claims through public-platform moderation.</li>
-    <li><strong>Higher curiosity:</strong> short questions and decision-point hooks may outperform technical explanations as first-contact content.</li>
-    <li><strong>Better qualification:</strong> FlowFirst learns the prospect's real concern before deciding what information to send.</li>
-    <li><strong>One funnel, many conditions:</strong> the same acquisition architecture can serve stroke recovery, longevity, prevention, cancer recovery, neurological conditions and overseas-treatment enquiries.</li>
-    <li><strong>FlowFirst becomes bigger than NOVO:</strong> the brand owns a way of thinking and an educational relationship rather than depending on one treatment or technology.</li>
-    <li><strong>Owned audience:</strong> the prospect relationship, source data and educational pathway increasingly sit inside FlowFirst-controlled channels.</li>
-  </ul>
+<h2>7. Green / Amber / Red messaging system</h2>
+<table>
+<thead><tr><th>Example</th><th>Risk</th><th>Guidance</th></tr></thead>
+<tbody>
+<tr><td>“What if there is another way to think about recovery?”</td><td><span class="pill low">GREEN</span></td><td>Curiosity without promising an answer or outcome.</td></tr>
+<tr><td>“What might be missing from the recovery conversation?”</td><td><span class="pill low">GREEN</span></td><td>Strong Think Flow First territory.</td></tr>
+<tr><td>“Before travelling overseas for treatment, Think Flow First.”</td><td><span class="pill low">GREEN</span></td><td>Decision-support hook, provided subsequent content is factual.</td></tr>
+<tr><td>“Before accepting there are no more options, ask one more question.”</td><td><span class="pill med">AMBER</span></td><td>Powerful, but the next step must not imply a guaranteed alternative.</td></tr>
+<tr><td>“There is an approach most people have never heard about.”</td><td><span class="pill med">AMBER</span></td><td>Creates a stronger implied promise; use cautiously.</td></tr>
+<tr><td>“Doctors are not telling you this.”</td><td><span class="pill high">RED</span></td><td>Conspiratorial and sensational; avoid.</td></tr>
+<tr><td>“The secret to stroke recovery.”</td><td><span class="pill high">RED</span></td><td>Implies hidden efficacy and resembles miracle/secret-cure language.</td></tr>
+<tr><td>“Comment FLOW to discover a breakthrough treatment.”</td><td><span class="pill high">RED</span></td><td>The treatment claim is already embedded in the CTA.</td></tr>
+</tbody>
+</table>
 
-  <h2>7. The role of NOVO, IGDS and RAHO</h2>
-  <p>NOVO, IGDS and RAHO remain important parts of the story, but they do not need to be the first thing a prospect sees.</p>
-  <p>The recommended sequence is:</p>
-  <div class="quote">Need → FlowFirst idea → Relevant science → Evidence → Emerging approach → NOVO / IGDS / RAHO where relevant → Available option.</div>
-  <p>This allows the technology to appear in context, after the prospect understands why it may be relevant.</p>
+<h2>8. The “truthful even without conversion” test</h2>
+<div class="callout"><strong>Before approving any public post, ask: If this person never becomes a FlowFirst customer, is the post still truthful, useful and worth seeing?</strong></div>
+<p>If yes, the post is more likely to fit an education-first model. If its only value is to create fear, conceal the commercial proposition or imply an extraordinary result, it should be reconsidered.</p>
 
-  <h2>8. What we should measure</h2>
-  <p>The primary acquisition metric should no longer be only clicks to a landing page. The funnel should measure movement from curiosity to meaningful conversation.</p>
-  <table>
-    <thead><tr><th>Stage</th><th>Example metric</th></tr></thead>
-    <tbody>
-      <tr><td>Public attention</td><td>Views, watch time, saves, shares</td></tr>
-      <tr><td>Response</td><td>Comments, DMs, keyword responses</td></tr>
-      <tr><td>Contact</td><td>Reachable prospects who consent to continue</td></tr>
-      <tr><td>Need identified</td><td>Condition / objective successfully categorized</td></tr>
-      <tr><td>Education engagement</td><td>Relevant resource opened, watched or discussed</td></tr>
-      <tr><td>Qualified conversation</td><td>Prospect or family completes meaningful discussion</td></tr>
-      <tr><td>Consultation / next step</td><td>Assessment, referral, consultation or program discussion</td></tr>
-      <tr><td>Customer / participant</td><td>Actual paid or enrolled outcome</td></tr>
-    </tbody>
-  </table>
+<h2>9. What changes for ThinkFlowFirst.com</h2>
+<p>The website no longer needs to function primarily as a cold-traffic treatment landing page. It should become a <strong>FlowFirst informational and educational knowledge hub</strong> that people visit after they have already chosen to learn more.</p>
+<table>
+<thead><tr><th>Website role</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><strong>FlowFirst Education</strong></td><td>Explain the vascular-first / flow-first way of thinking in simple language.</td></tr>
+<tr><td><strong>Condition Information</strong></td><td>Organise education around stroke recovery, longevity, prevention, cancer recovery, neurological recovery and other areas of interest.</td></tr>
+<tr><td><strong>Emerging Science</strong></td><td>Explain nanobubbles, gasotransmitters, microcirculation and related research while clearly separating established knowledge from emerging ideas.</td></tr>
+<tr><td><strong>Evidence Library</strong></td><td>Host publications, studies, RAHO materials, observational experience and explanatory documents with clear evidence labels.</td></tr>
+<tr><td><strong>Videos & Briefings</strong></td><td>Host longer-form explanations that do not fit short social posts.</td></tr>
+<tr><td><strong>Available Options</strong></td><td>Explain services, providers, programs and emerging approaches, where they are available and what questions a prospect should ask.</td></tr>
+<tr><td><strong>Stakeholder Resources</strong></td><td>Provide shareable frameworks, partner documents and educational materials for doctors, referrers and collaborators.</td></tr>
+</tbody>
+</table>
 
-  <h2>9. Immediate implementation priorities</h2>
-  <ul>
-    <li>Create a small bank of curiosity-led trial posts for Facebook, TikTok, YouTube Shorts and partner channels.</li>
-    <li>Standardize keyword CTAs such as FLOW and condition-specific alternatives.</li>
-    <li>Create a simple private-response script that asks why the person responded before sending information.</li>
-    <li>Tag every enquiry by source, hook, condition, market and outcome.</li>
-    <li>Begin restructuring ThinkFlowFirst.com as an informational knowledge hub.</li>
-    <li>Build the first condition information pathway, with stroke recovery as the logical first test.</li>
-    <li>Separate public-platform creative from deeper educational content.</li>
-    <li>Create clear evidence labels for established science, published research, observational data and emerging hypotheses.</li>
-  </ul>
+<h2>10. The role of NOVO, IGDS and RAHO</h2>
+<p>NOVO, IGDS and RAHO remain important parts of the story, but they do not need to be the first thing a prospect sees.</p>
+<div class="quote">Need → FlowFirst idea → Relevant science → Evidence → Emerging approach → NOVO / IGDS / RAHO where relevant → Available option</div>
+<p>This puts the technology in context rather than making it the first-line public claim.</p>
 
-  <h2>10. The next document: the operating playbook</h2>
-  <p>This framework defines the strategic direction. The next document should turn it into a repeatable operating system for the marketing and response team.</p>
-  <p>The <strong>FlowFirst Demand Funnel Playbook</strong> should include:</p>
-  <ul>
-    <li>approved public hook families and sample posts;</li>
-    <li>platform-specific creative formats;</li>
-    <li>comment and DM response scripts;</li>
-    <li>qualification questions by condition;</li>
-    <li>rules for what information to send at each stage;</li>
-    <li>website content-routing map;</li>
-    <li>evidence and claims guardrails;</li>
-    <li>CRM tags and attribution rules;</li>
-    <li>follow-up sequences;</li>
-    <li>team roles, escalation rules and response-time standards;</li>
-    <li>weekly funnel scorecard and test/learn process.</li>
-  </ul>
+<h2>11. Why this model may be stronger</h2>
+<ul>
+<li><strong>Platform resilience:</strong> less dependence on public platforms carrying complex emerging-therapy claims.</li>
+<li><strong>Better engagement:</strong> short questions and decision-point hooks can be easier to understand than technical explanations.</li>
+<li><strong>Better qualification:</strong> FlowFirst learns the prospect's real concern before deciding what information to send.</li>
+<li><strong>One funnel, many conditions:</strong> the same architecture can serve recovery, longevity, prevention and overseas-treatment enquiries.</li>
+<li><strong>FlowFirst becomes bigger than NOVO:</strong> the brand owns a way of thinking and an educational relationship rather than depending on one technology.</li>
+<li><strong>Owned audience:</strong> the prospect relationship, source data and educational pathway increasingly sit inside FlowFirst-controlled channels.</li>
+</ul>
 
-  <h2>11. Strategic principle</h2>
-  <div class="callout"><strong>We do not need public platforms to tell our entire story.</strong> We need them to help the right people discover that there may be another question worth asking. FlowFirst then earns trust by giving them better information, in the right order, based on what they actually need.</div>
+<h2>12. What we should measure</h2>
+<table>
+<thead><tr><th>Stage</th><th>Example metric</th></tr></thead>
+<tbody>
+<tr><td>Public attention</td><td>Views, watch time, saves, shares</td></tr>
+<tr><td>Response</td><td>Comments, DMs, keyword responses</td></tr>
+<tr><td>Contact</td><td>Reachable prospects who consent to continue</td></tr>
+<tr><td>Need identified</td><td>Condition / objective successfully categorised</td></tr>
+<tr><td>Education engagement</td><td>Relevant resource opened, watched or discussed</td></tr>
+<tr><td>Qualified conversation</td><td>Prospect or family completes meaningful discussion</td></tr>
+<tr><td>Consultation / next step</td><td>Assessment, referral, consultation or program discussion</td></tr>
+<tr><td>Customer / participant</td><td>Actual paid or enrolled outcome</td></tr>
+</tbody>
+</table>
 
-  <div class="footer">FlowFirst Curiosity-Led Demand Funnel Framework · Stakeholder & Marketing Team Working Document · Published 2 October 2026</div>
+<h2>13. Immediate implementation priorities</h2>
+<ul>
+<li>Adopt the Green / Amber / Red hook classification across the marketing team.</li>
+<li>Review the existing Hook Family Map against these guardrails.</li>
+<li>Create a first bank of 20–30 Green curiosity posts for stroke recovery.</li>
+<li>Standardise keyword CTAs and private-response scripts.</li>
+<li>Tag every enquiry by source, hook, condition, market and outcome.</li>
+<li>Restructure ThinkFlowFirst.com progressively as an informational knowledge hub.</li>
+<li>Create evidence labels distinguishing established science, published studies, observational experience and emerging hypotheses.</li>
+<li>Review platform policies periodically because health-advertising rules change.</li>
+</ul>
+
+<h2>14. The next document: FlowFirst Demand Funnel Playbook</h2>
+<p>This master framework defines the strategic direction. The next document should turn it into a repeatable operating system.</p>
+<ul>
+<li>approved hook families and sample posts;</li>
+<li>platform-specific creative formats;</li>
+<li>comment and DM response scripts;</li>
+<li>qualification questions by condition;</li>
+<li>rules for what information to send at each stage;</li>
+<li>website content-routing map;</li>
+<li>evidence and claims guardrails;</li>
+<li>CRM tags and attribution rules;</li>
+<li>follow-up sequences;</li>
+<li>team roles, escalation rules and response-time standards;</li>
+<li>weekly funnel scorecard and test/learn process.</li>
+</ul>
+
+<h2>15. Source discussion</h2>
+<div class="note callout"><strong>Origin of this framework:</strong> developed from the FlowFirst / ChatGPT project discussion on the Curiosity-Led Demand Funnel.<br><br><strong>Read the source thread:</strong> <a href="https://chatgpt.com/share/6abf5a02-9e08-83ec-a89a-25b90c51d3fd" target="_blank" rel="noopener">Open the original ChatGPT discussion</a>.</div>
+
+<h2>16. References</h2>
+<div class="sources"><ul>
+<li><a href="https://www.ahrq.gov/questions/about/index.html" target="_blank" rel="noopener">AHRQ — Questions Are the Answer</a></li>
+<li><a href="https://www.nhsinform.scot/campaigns/its-ok-to-ask" target="_blank" rel="noopener">NHS inform — It’s OK to Ask</a></li>
+<li><a href="https://www.who.int/cambodia/news/feature-stories/item/breaking-behavioural-barriers--fighting-antibiotic-misuse-in-cambodia-through-youth-led-creativity" target="_blank" rel="noopener">WHO Cambodia — antibiotic-awareness campaign</a></li>
+<li><a href="https://ads.tiktok.com/business/en-SG/guides/health-and-wellness-advertising" target="_blank" rel="noopener">TikTok for Business — Health and Wellness Advertising Guide</a></li>
+<li><a href="https://support.google.com/youtube/answer/13813322?hl=en-0" target="_blank" rel="noopener">YouTube — Medical Misinformation Policy</a></li>
+<li><a href="https://support.google.com/adspolicy/answer/16701855?hl=en" target="_blank" rel="noopener">Google Ads — Sensitive Interest Categories</a></li>
+<li><a href="https://transparency.meta.com/policies/ad-standards/" target="_blank" rel="noopener">Meta — Advertising Standards</a></li>
+</ul></div>
+
+<div class="footer">FlowFirst Curiosity-Led Demand Funnel Framework · Definitive Stakeholder & Marketing Team Working Document · Updated 2 October 2026</div>
 </main>
 </body>
 </html>
