@@ -1,5 +1,13 @@
 [
   {
+    "title": "Think Flow First — Master Hook Library",
+    "description": "Canonical source of truth for Think Flow First hooks. Consolidates the former Hook Family Map and master hook repository into 21 core hook families, locked lines, formulas, examples, tactical angles and public-facing health messaging guardrails. Includes the locked If You Are Into / Companion Therapy family.",
+    "category": "Marketing",
+    "date_published": "2026-10-05",
+    "url": "/hook-family-map.html",
+    "status": "Published"
+  },
+  {
     "title": "The Longevity Therapy Companion — Where Advanced Flow Fits",
     "description": "Consumer-friendly comparison of vitamin drips, NAD+, peptides, PRP, exosomes, stem cells and Advanced Flow. Explains the different biological jobs, positions Advanced Flow as physiological/environmental support powered by NOVO / IGDS, and introduces the idea of creating a better environment for the rest of a longevity programme.",
     "category": "Education",
@@ -61,14 +69,6 @@
     "category": "Strategy",
     "date_published": "2026-09-30",
     "url": "/commercialisation-proposal-discussion-review-2026-09-30.html",
-    "status": "Published"
-  },
-  {
-    "title": "Think Flow First Hook Family Map",
-    "description": "Official messaging map for 20 core hook families, two audience zones, eight tactical hook angles, example formulas, and public-facing health copy guardrails.",
-    "category": "Marketing",
-    "date_published": "2026-09-29",
-    "url": "/hook-family-map.html",
     "status": "Published"
   },
   {
