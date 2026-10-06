@@ -2,6 +2,30 @@
 
 This file records major working versions of ThinkFlowFirst.com for review, stakeholder education, and product-development learning.
 
+## V2 — Content & Trust Upgrade
+**Date:** 6 Oct 2026  
+**Frozen branch:** `history/v2-content-trust`  
+**Live archive:** https://thinkflowfirst-v2-history.onrender.com
+
+### Purpose
+Make the Flow First idea more understandable, credible, and visually substantial while preserving the V1 responder flow.
+
+### Included
+- Deeper What Is Flow First explanation
+- Expanded Why Flow Matters education
+- Deeper RAHO story and evidence framing
+- About / Trust page
+- Contact page
+- Stronger visual hierarchy
+- Multi-select follow-up intentions
+- Development-history link in the main site
+
+### Review focus
+- Is the Flow First explanation deep enough?
+- Does the RAHO story provide sufficient credibility?
+- Does the site feel trustworthy and institutionally complete?
+- Is the visual presentation strong enough to proceed to multilingual and voice?
+
 ## V1 — Functional Prototype
 **Date:** 6 Oct 2026  
 **Frozen branch:** `history/v1-functional-prototype`  
