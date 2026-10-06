@@ -161,12 +161,20 @@ table{width:100%;border-collapse:collapse;margin:1rem 0 2rem;font-size:.95rem}th
 <div class="script"><strong>Curiosity → response → tagged entry door → education → intake → capture → useful content → share → new visitor → new capture.</strong></div>
 <p>Referral tracking should distinguish the immediate shared/referral visit from the original ancestor campaign wherever practical, without exposing the original visitor's personal information.</p>
 
-<h2>12. Current V2 staging status vs. target live workflow</h2>
-<div class="callout status"><strong>Already working in staging:</strong> entry doors, source/campaign/hook/channel parameters, seven-question intake, contact capture, multi-select intentions, sharing, and submission to the site's lead endpoint.</div>
-<div class="callout warning"><strong>Not yet connected for production:</strong> the lead endpoint currently records staging submissions in Render logs when no external lead destination is configured. Before real traffic is sent, we must connect a master lead store and make “Help Now” trigger a real human alert.</div>
-<p>The intended simple V2.1 backend is:</p>
-<div class="script"><strong>ThinkFlowFirst.com → master lead database → Help Now alert / Country Waitlist / Keep Posted nurture.</strong></div>
-<p>The first live lead database can be deliberately simple. The operating framework does not depend on a particular CRM vendor; the important requirement is that source attribution, seven-question answers, consent/intention and follow-up status remain together in one controlled record.</p>
+<h2>12. V2.1 backend — Google Sheets</h2>
+<div class="callout status"><strong>Chosen lead store:</strong> Google Sheets. ThinkFlowFirst.com will send every completed intake to one controlled master sheet through a Google Apps Script webhook.</div>
+<p>The V2.1 flow is:</p>
+<div class="script"><strong>ThinkFlowFirst.com → Render /api/lead → Google Apps Script → Google Sheet → Help Now alert / Country Waitlist / Keep Posted.</strong></div>
+<p>The Google Sheet will contain four operational tabs:</p>
+<ul>
+<li><strong>All Leads</strong> — the single master record for each visitor.</li>
+<li><strong>Help Now</strong> — dynamic view of people asking for human follow-up.</li>
+<li><strong>Country Waitlist</strong> — dynamic view of people asking to be notified when Flow First reaches their country.</li>
+<li><strong>Keep Posted</strong> — dynamic view of people who requested ongoing educational updates.</li>
+</ul>
+<p>A person is stored only once in <strong>All Leads</strong>. The other tabs are views of that record rather than duplicates.</p>
+<div class="callout"><strong>Help Now alert:</strong> when a visitor selects “I’d like help now,” the Google Apps Script sends an immediate email to <strong>nick81733@gmail.com</strong>. The email contains only name, country, entry door, contact details, received time and lead ID. Detailed seven-question health responses remain in the restricted Google Sheet.</div>
+<div class="callout warning"><strong>Current implementation status:</strong> the Google Sheets receiver, tab structure and Help Now email logic have been prepared in the ThinkFlowFirst repository. The final live connection still requires the Google Sheet / Apps Script deployment to be authorized in the user's Google account and its deployment URL added to Render as <code>LEAD_WEBHOOK_URL</code>. Until that is completed, staging submissions continue to fall back to Render logs.</div>
 
 <h2>13. Team roles</h2>
 <table>
