@@ -1,5 +1,22 @@
 # Think Flow First — Development History
 
+## V3 — Integrated Education Journey
+**Date:** 8 Oct 2026  
+**Current working release:** https://thinkflowfirst.onrender.com
+
+### Purpose
+Preserve the V2 trust and responder journey while integrating 18 education modules into the What Is Flow First learning sequence.
+
+### Included
+- Full V2 website, RAHO story, topic entry doors, About, Contact, responder tool and tracking
+- What Is Flow First → Continue Learning → 18-module curriculum
+- Education access in main navigation, homepage and footer
+- Static-site route compatibility work (server-backed lead intake still requires a Node.js Web Service)
+
+### Release note
+V3 is the current working version, not yet a frozen historical archive. Functional verification and lead delivery remain outstanding.
+
+
 This file records major working versions of ThinkFlowFirst.com for review, stakeholder education, and product-development learning.
 
 ## V2 — Content & Trust Upgrade
