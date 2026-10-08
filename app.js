@@ -165,6 +165,15 @@ function renderDoor(slug){
  initIntake(slug); wireShareButtons();
 }
 
+function educationContinuation(){
+ return `<section class="section soft" id="continue-learning">
+ <div class="eyebrow">Continue your understanding</div>
+ <h2>You've understood the idea. Now explore the science.</h2>
+ <p class="section-lead">Discover how circulation and microcirculation work, why nitric oxide matters, and how to assess scientific evidence. Follow 18 guided lessons, starting with the foundations of Flow First.</p>
+ <div class="hero-actions"><a class="btn" href="/education/module-01.html">Continue learning — Module 1 →</a><a class="btn secondary" href="/education.html">Browse all 18 modules</a></div>
+ </section>`;
+}
+
 function renderWhat(){
  app.innerHTML = `${headerBand('Core idea','What is Flow First?','A simple way to think about health, recovery and longevity in the right order.')}${coreFlowSections('general')}
  <section class="section soft"><div class="eyebrow">What Flow First is not</div><h2>It is not “blood flow fixes everything.”</h2><div class="three-grid">
@@ -172,7 +181,7 @@ function renderWhat(){
   <article class="trust-card"><h3>Not a replacement</h3><p>It is designed to complement appropriate medical care, rehabilitation and other therapies.</p></article>
   <article class="trust-card"><h3>Not a guarantee</h3><p>It is an educational framework for asking better questions and considering foundational physiology earlier.</p></article>
  </div></section>
- ${rahoTeaser()}${exploreSection()}<section class="section">${shareStrip()}</section>`;
+ ${educationContinuation()}${rahoTeaser()}${exploreSection()}<section class="section">${shareStrip()}</section>`;
  wireShareButtons();
 }
 
