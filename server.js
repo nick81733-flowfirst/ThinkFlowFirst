@@ -8,25 +8,49 @@ const root = __dirname;
 
 app.use(express.json({ limit: '256kb' }));
 
-function briefLead(body) {
+function fullLead(body) {
   const a = body && typeof body.answers === 'object' && body.answers ? body.answers : {};
   const src = body && typeof body.attribution === 'object' && body.attribution ? body.attribution : {};
-  const safe = (v, n = 180) => String(v == null ? '' : v).replace(/[<>\x00-\x1f]/g, ' ').slice(0, n);
-  const contact = a.messaging || a.email || a.phone || a.whatsapp;
-  const intentLabels = { 'help-now': 'Requests help now', 'country-alert': 'Country availability updates', 'keep-posted': 'Educational updates' };
-  const intents = Array.isArray(a.intents) ? a.intents.map(v => intentLabels[v] || safe(v)).join(', ') : '';
-  const lines = ['New Think Flow First website enquiry',
-    'Name: ' + safe(a.name || 'Not provided'),
-    'Contact: ' + safe(contact || 'Not provided'),
-    'Country: ' + safe(a.country || 'Not provided'),
-    'Regarding: ' + safe(a.relationship || 'Not provided'),
-    'Timing: ' + safe(a.timing || 'Not provided'),
-    'Follow-up: ' + safe(intents || 'Not specified'),
-    'Source: ' + safe(src.utm_source || src.source || 'Direct / unknown'),
-    'Campaign: ' + safe(src.utm_campaign || src.campaign || 'None')];
-  if (body && body.type === 'contact') lines.push('Contact form message received; review securely.');
-  lines.push('Sensitive medical details are intentionally excluded. Follow up privately.');
-  return lines.join('\n');
+  const clean = (v) => String(v == null ? '' : v).replace(/[\x00-\x1f]/g, ' ').trim();
+  const fields = [
+    ['Name', a.name], ['Email', a.email], ['WhatsApp / Telegram', a.messaging],
+    ['1. Who are you asking about?', a.relationship],
+    ['2. Main health situation or goal', a.situation],
+    ['3. How long has this been relevant?', a.timing],
+    ['4. Biggest concern or challenge', a.challenge],
+    ['5. What are you hoping to understand or improve?', a.goal],
+    ['6. Current care, treatments or approaches', a.currentCare],
+    ['7. Country / city', a.country],
+    ['Follow-up preferences', Array.isArray(a.intents) ? a.intents.map(v => ({
+      'help-now': 'Help now', 'country-alert': 'Country availability alerts',
+      'keep-posted': 'Educational updates'
+    }[v] || v)).join(', ') : a.intents],
+    ['Flow First Brief opt-in', a.flowFirstBrief === true ? 'Yes' : 'No'],
+    ['Source', src.utm_source || src.source || 'Direct / unknown'],
+    ['Campaign', src.utm_campaign || src.campaign || 'None']
+  ];
+  if (body && body.type === 'contact') {
+    return ['New Think Flow First contact form message',
+      ...Object.entries(a).map(([k, v]) => clean(k) + ': ' + clean(v)),
+      'Source: ' + clean(src.utm_source || src.source || 'Direct / unknown')].join('\n');
+  }
+  return ['New Think Flow First questionnaire', ...fields.map(([label, value]) =>
+    label + ':\n' + clean(value === undefined || value === '' ? 'Not provided' : value)
+  )].join('\n\n');
+}
+
+function splitTelegramMessage(message, maxLength = 3500) {
+  const chunks = [];
+  let remaining = message;
+  while (remaining.length > maxLength) {
+    let at = remaining.lastIndexOf('\n\n', maxLength);
+    if (at < maxLength / 2) at = remaining.lastIndexOf('\n', maxLength);
+    if (at < maxLength / 2) at = maxLength;
+    chunks.push(remaining.slice(0, at));
+    remaining = remaining.slice(at).trimStart();
+  }
+  if (remaining) chunks.push(remaining);
+  return chunks;
 }
 
 app.post('/api/lead', async (req, res) => {
@@ -34,13 +58,17 @@ app.post('/api/lead', async (req, res) => {
   const chatId = process.env.TELEGRAM_CHAT_ID;
   if (token && chatId) {
     try {
-      const response = await fetch('https://api.telegram.org/bot' + token + '/sendMessage', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ chat_id: chatId, text: briefLead(req.body), disable_web_page_preview: true }),
-        signal: AbortSignal.timeout(10000)
-      });
-      if (!response.ok) throw new Error('Telegram returned HTTP ' + response.status);
+      const parts = splitTelegramMessage(fullLead(req.body));
+      for (let i = 0; i < parts.length; i++) {
+        const text = parts.length > 1 ? 'Part ' + (i + 1) + '/' + parts.length + '\n\n' + parts[i] : parts[i];
+        const response = await fetch('https://api.telegram.org/bot' + token + '/sendMessage', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ chat_id: chatId, text, disable_web_page_preview: true }),
+          signal: AbortSignal.timeout(10000)
+        });
+        if (!response.ok) throw new Error('Telegram returned HTTP ' + response.status);
+      }
       return res.json({ ok: true });
     } catch (error) {
       console.error('[TFF Telegram delivery failed]', error.message);
