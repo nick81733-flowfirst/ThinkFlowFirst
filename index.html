@@ -3,30 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Think Flow First — understand why circulation, delivery and the body's internal environment matter before deciding what comes next." />
   <title>Think Flow First</title>
-  <meta name="description" content="Think Flow First — a simple framework for health, recovery, prevention and longevity." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <main class="wrap">
-    <section class="hero">
-      <p class="eyebrow">THINK FLOW FIRST</p>
-      <h1>Trillions of cells. One circulation.</h1>
-      <p class="lead">A simple way to think about health, recovery, longevity and prevention: start with flow.</p>
-      <div class="actions">
-        <a class="button" href="/education.html">Explore the 18 education modules</a>
-      </div>
-    </section>
+  <header class="site-header">
+    <a class="brand" href="/start" aria-label="Think Flow First home">
+      <span class="brand-kicker">THINK</span>
+      <span class="brand-main">FLOW FIRST</span>
+    </a>
+    <nav class="nav">
+      <a href="/what-is-flow-first">What is Flow First?</a>
+      <a href="/why-flow-matters">Why Flow Matters</a>
+      <a href="/education.html">Education · 18 Modules</a>
+      <a href="/start#explore">Explore</a>
+      <a href="/raho">RAHO Story</a>
+      <a href="/education.html">Education Journey</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a class="nav-cta" href="/start#intake">Where to Start</a>
+    </nav>
+    <button class="menu-button" aria-label="Open menu">☰</button>
+  </header>
 
-    <section id="framework" class="card">
-      <h2>Why flow first?</h2>
-      <p>Every tissue depends on circulation to deliver oxygen and nutrients, remove waste and support normal biological function. Think Flow First is an education platform built around that foundational idea.</p>
-    </section>
+  <main id="app"></main>
 
-    <section class="card">
-      <h2>Start your education journey</h2>
-      <p>Read 18 guided lessons on circulation, microcirculation, vascular health, evidence and emerging technology. <a href="/education.html">Browse all modules →</a></p>
-    </section>
-  </main>
+  <footer class="footer">
+    <div>
+      <div class="footer-brand">THINK FLOW FIRST</div>
+      <p>Education first. Better questions before bigger decisions.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/what-is-flow-first">What is Flow First?</a>
+      <a href="/raho">RAHO Story</a>
+      <a href="/about">About / Trust</a>
+      <a href="/contact">Contact</a>
+      <a href="/start#explore">Explore</a>
+      <a href="/start#intake">Where to Start</a>
+      <a href="/history.html">Development History</a>
+    </div>
+    <p class="legal">Think Flow First provides educational information and does not provide emergency medical care, diagnosis, or a substitute for advice from a qualified healthcare professional. If you believe you are experiencing a medical emergency, contact local emergency services immediately.</p>
+  </footer>
+
+  <script src="/app.js" defer></script>
 </body>
 </html>
