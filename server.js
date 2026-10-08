@@ -11,7 +11,7 @@ app.use(express.json({ limit: '256kb' }));
 function briefLead(body) {
   const a = body && typeof body.answers === 'object' && body.answers ? body.answers : {};
   const src = body && typeof body.attribution === 'object' && body.attribution ? body.attribution : {};
-  const safe = (v, n = 180) => String(v == null ? '' : v).replace(/[<>\\x00-\\x1f]/g, ' ').slice(0, n);
+  const safe = (v, n = 180) => String(v == null ? '' : v).replace(/[<>\u0000-\u001f]/g, ' ').slice(0, n);
   const contact = a.messaging || a.email || a.phone || a.whatsapp;
   const intentLabels = { 'help-now': 'Requests help now', 'country-alert': 'Country availability updates', 'keep-posted': 'Educational updates' };
   const intents = Array.isArray(a.intents) ? a.intents.map(v => intentLabels[v] || safe(v)).join(', ') : '';
