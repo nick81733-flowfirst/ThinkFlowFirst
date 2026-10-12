@@ -1,23 +1,95 @@
 [
   {
+    "title": "FlowFirst — Batam, JB & Singapore Access Launch Framework",
+    "description": "Stakeholder discussion brief for Patricia Sin, Rykel and the FlowFirst team: Batam introductory visits, JB continuation, Singapore special access, agent commissions, caregiver costs and launch economics.",
+    "category": "Strategy & Access",
+    "date_published": "2026-10-12",
+    "url": "/flowfirst-batam-jb-singapore-access-launch-framework-2026-10-12.html",
+    "status": "Discussion draft"
+  },
+  {
+    "title": "Kerangka Akses Global & Komersialisasi Advanced Flow — Briefing Strategis untuk Eddy Kan",
+    "description": "Kerangka strategis revisi untuk RAHO dan Flow First Global mengenai akses regulasi, komersialisasi longevity, Special Access, Clinical Champion, Access Hub dan pengembangan klinis Advanced Flow.",
+    "category": "Strategy & Access",
+    "date_published": "2026-10-12",
+    "url": "/advanced-flow-global-access-commercialization-framework-id-2026-10-12.html",
+    "status": "Published"
+  },
+  {
+    "title": "FFG × RAHO × Mediwhale | Strategic Collaboration Framework",
+    "description": "A discussion framework on collaboration between Flow First Global, RAHO and Mediwhale across retinal AI screening, clinical evidence and international access.",
+    "category": "Partnerships",
+    "date_published": "2026-10-12",
+    "url": "/ffg-raho-mediwhale-strategic-collaboration.html",
+    "status": "Published"
+  },
+  {
+    "title": "Advanced Flow Global Access & Commercialization Framework — Revised Strategic Briefing for Eddy Kan",
+    "description": "Revised strategic framework for RAHO and Flow First Global on Advanced Flow regulatory access, longevity commercialization, Special Access, Access Hubs and clinical development.",
+    "category": "Strategy & Access",
+    "date_published": "2026-10-12",
+    "url": "/advanced-flow-global-access-commercialization-framework-2026-10-12.html",
+    "status": "Published"
+  },
+  {
+    "title": "AFW × La Vista One Club | Joint Business Development Proposal",
+    "description": "AFW Holdings and La Vista One Club independent partner network — proposed reciprocal business development alliance.",
+    "category": "Partnerships",
+    "date_published": "2026-10-12",
+    "url": "/partnerships/afw-la-vista-one-joint-business-development-proposal.html",
+    "status": "Published"
+  },
+  {
+    "title": "Think Flow First — Website Strategy and Customer Journey",
+    "description": "Executive team briefing on the logic, customer journey, marketing, and role of ThinkFlowFirst.com.",
+    "category": "Marketing",
+    "date_published": "2026-10-08",
+    "url": "/thinkflowfirst-website-strategy-customer-journey-2026-10-08.html",
+    "status": "Published"
+  },
+  {
+    "title": "Think Flow First — Full Manuscript and Page Briefs",
+    "description": "Standalone stakeholder document for review and reference.",
+    "category": "Education",
+    "date_published": "2026-10-08",
+    "url": "/thinkflowfirst-education-full-manuscript-review-2026-10-08.html",
+    "status": "Published"
+  },
+  {
+    "title": "Think Flow First Education Master — Stakeholder Review",
+    "description": "Master stakeholder review document for the 18-module Think Flow First education-to-access journey.",
+    "category": "Education",
+    "date_published": "2026-10-08",
+    "url": "/thinkflowfirst-education-master-2026-10-08.html",
+    "status": "Published"
+  },
+  {
+    "title": "FlowFirst Brand Architecture & Go-to-Market Guide",
+    "description": "Updated FlowFirst brand architecture for stakeholders and marketing teams across Cambodia, Malaysia, Singapore and future markets.",
+    "category": "Brand",
+    "date_published": "2026-10-08",
+    "url": "/flowfirst-brand-architecture-2026-10-08.html",
+    "status": "Published"
+  },
+  {
     "title": "Executive Summary — ThinkFlowFirst → FlowFirst Clinical Partner Framework",
-    "description": "Concise stakeholder summary of the FlowFirst operating architecture: ThinkFlowFirst education, FlowCare navigation, non-clinical Advisors, licensed clinical decision-making, Authorized Clinical Partners, RAHO training, controlled NOVO / IGDS supply, AFW Sanctuary and RAHO Indonesia inbound medical tourism.",
-    "category": "Strategy",
+    "description": "Executive summary of the ThinkFlowFirst to FlowFirst clinical partner framework: education, navigation, clinical governance, RAHO training, authorized partners, product supply and destination pathways.",
+    "category": "Strategy & Access",
     "date_published": "2026-10-07",
     "url": "/thinkflowfirst-flowfirst-clinical-partner-framework-executive-summary-2026-10-07.html",
     "status": "Published"
   },
   {
     "title": "ThinkFlowFirst → FlowFirst Clinical Partner Framework",
-    "description": "Discussion and adoption framework for moving from ThinkFlowFirst blood-flow education and the RAHO experience into qualified navigation, licensed clinical assessment, RAHO-trained clinicians, FlowFirst Authorized Clinical Partners, FlowFirst Centers, AFW Sanctuary and RAHO Indonesia as an inbound medical-tourism destination.",
-    "category": "Strategy",
+    "description": "Discussion and adoption framework for how ThinkFlowFirst education transitions into FlowFirst navigation, licensed clinical assessment, authorized partners, RAHO training and destination pathways.",
+    "category": "Strategy & Access",
     "date_published": "2026-10-06",
     "url": "/thinkflowfirst-flowfirst-clinical-partner-framework-2026-10-06.html",
     "status": "Published"
   },
   {
     "title": "Think Flow First — Digital Marketing Responder & Website Operating Framework",
-    "description": "Practical team workflow for curiosity-led response handling through ThinkFlowFirst.com: campaign/hook IDs, private responder bridge, tagged entry-door links, seven-question intake, contact capture, multi-select intentions, lead routing, sharing/referral, attribution, daily operating rules and current staging-to-live requirements.",
+    "description": "Operating framework for the ThinkFlowFirst.com responder journey: hooks, private replies, tagged links, entry doors, seven-question intake, lead capture, routing, nurture, sharing and attribution.",
     "category": "Marketing",
     "date_published": "2026-10-06",
     "url": "/thinkflowfirst-digital-marketing-responder-website-operating-framework-2026-10-06.html",
@@ -25,15 +97,15 @@
   },
   {
     "title": "Think Flow First — Master Hook Library",
-    "description": "Canonical source of truth for Think Flow First hooks. Consolidates the former Hook Family Map and master hook repository into 21 core hook families, locked lines, formulas, examples, tactical angles and public-facing health messaging guardrails. Includes the locked If You Are Into / Companion Therapy family.",
+    "description": "The canonical Think Flow First Master Hook Library: approved hook families, locked lines, formulas, examples, audience zones and messaging guardrails.",
     "category": "Marketing",
     "date_published": "2026-10-05",
     "url": "/hook-family-map.html",
     "status": "Published"
   },
   {
-    "title": "The Longevity Therapy Companion — Where Advanced Flow Fits",
-    "description": "Consumer-friendly comparison of vitamin drips, NAD+, peptides, PRP, exosomes, stem cells and Advanced Flow. Explains the different biological jobs, positions Advanced Flow as physiological/environmental support powered by NOVO / IGDS, and introduces the idea of creating a better environment for the rest of a longevity programme.",
+    "title": "The Longevity Therapy Companion — Advanced Flow",
+    "description": "Consumer-friendly comparison of vitamin drips, NAD+, peptides, PRP, exosomes, stem cells and Advanced Flow, positioned as different tools for different biological jobs.",
     "category": "Education",
     "date_published": "2026-10-04",
     "url": "/longevity-therapy-companion-advanced-flow-2026-10-04.html",
@@ -48,11 +120,35 @@
     "status": "Published"
   },
   {
+    "title": "FlowFirst Channel × Demand Entry Door Framework",
+    "description": "Stakeholder and digital marketing framework mapping FlowFirst demand entry doors across online and offline channels.",
+    "category": "Marketing",
+    "date_published": "2026-10-04",
+    "url": "/flowfirst-channel-demand-entry-door-framework-2026-10-04.html",
+    "status": "Published"
+  },
+  {
+    "title": "AFW Holdings — Investor Reference Deck",
+    "description": "Standalone stakeholder document for review and reference.",
+    "category": "Investor",
+    "date_published": "2026-10-04",
+    "url": "/afw-holdings-investor-reference-deck-2026-10-04.html",
+    "status": "Published"
+  },
+  {
     "title": "Malaysia NOVO Market Entry, Demand Creation & Home-IV Playbook",
     "description": "Stakeholder framework for proving a compliant, capital-light Malaysia Advanced Flow / NOVO model: category creation, regulatory pathways, home-IV market intelligence, the repeatable 2-chair unit, acquisition doors, digital funnel, partner model, 90-day pilot and country-scale playbook.",
-    "category": "Strategy",
+    "category": "Marketing",
     "date_published": "2026-10-03",
     "url": "/malaysia-novo-market-entry-demand-creation-home-iv-playbook-2026-10-03.html",
+    "status": "Published"
+  },
+  {
+    "title": "AFW Holdings — Master Investor Framework",
+    "description": "Standalone stakeholder document for review and reference.",
+    "category": "Investor",
+    "date_published": "2026-10-03",
+    "url": "/afw-holdings-investor-deck-framework-2026-10-03.html",
     "status": "Published"
   },
   {
@@ -64,12 +160,36 @@
     "status": "Published"
   },
   {
-    "title": "AFW Holdings — Investor Deck Framework",
+    "title": "Why FlowFirst Is Investigating a Curiosity-Led Demand Funnel — Previous / supporting version",
+    "description": "Stakeholder framework explaining why FlowFirst is investigating curiosity-led demand creation, examples from healthcare and public health, and social-platform safety guardrails.",
+    "category": "Marketing",
+    "date_published": "2026-10-02",
+    "url": "/curiosity-led-demand-funnel-rationale-safety-2026-10-02.html",
+    "status": "Previous / supporting"
+  },
+  {
+    "title": "Why FlowFirst Is Investigating a Curiosity-Led Demand Funnel — Previous / supporting version",
+    "description": "Stakeholder framework on the rationale, precedents and platform guardrails for a curiosity-led FlowFirst demand funnel.",
+    "category": "Marketing",
+    "date_published": "2026-10-02",
+    "url": "/curiosity-led-demand-funnel-rationale-safety-v2-2026-10-02.html",
+    "status": "Previous / supporting"
+  },
+  {
+    "title": "FlowFirst Curiosity-Led Demand Funnel Framework",
+    "description": "Master stakeholder framework for FlowFirst",
+    "category": "Marketing",
+    "date_published": "2026-10-02",
+    "url": "/curiosity-led-demand-funnel-framework-2026-10-02.html",
+    "status": "Published"
+  },
+  {
+    "title": "AFW Holdings — Investor Deck Framework — Previous / supporting version",
     "description": "Investor-facing framework for AFW Holdings: four economic engines, shared demand/supply/distribution platforms, PropertyCo and lifestyle plots, Sanctuary economics, Cambodia Commercial, international scale, consolidated cash-flow potential, valuation rationale, use of funds, investor return pathways and illustrative cash distributions.",
     "category": "Investor",
     "date_published": "2026-10-02",
     "url": "/afw-holdings-investor-deck-framework-2026-10-02.html",
-    "status": "Published"
+    "status": "Previous / supporting"
   },
   {
     "title": "AFW Sanctuary Phase 1 — Key Hires for BongThom",
@@ -82,7 +202,7 @@
   {
     "title": "AFW Sanctuary Phase 1 — FlowFirst Wellness Business Model",
     "description": "Stakeholder framework for launching AFW Sanctuary as a seven-suite FlowFirst residential wellness business: five Phase 1 programs, Advanced Flow/NOVO positioning, $330 residential pricing, referral commissions, HR, China-direct capex, $16k operating cost, $6k facility rental, break-even and property-adjusted P&L.",
-    "category": "Strategy",
+    "category": "Strategy & Access",
     "date_published": "2026-10-01",
     "url": "/afw-sanctuary-flowfirst-phase1-business-model-2026-10-01.html",
     "status": "Published"
@@ -90,41 +210,49 @@
   {
     "title": "Commercialisation Proposal — Discussion Review",
     "description": "Management response to Commercialisation Proposal Draft 2: page-by-page Agree / Change / Question / Reject comments, corrected FlowFirst architecture using ThinkFlowFirst, FlowCare and FlowFirst Centers, six-month priorities, and requested Draft 3 revisions.",
-    "category": "Strategy",
+    "category": "Strategy & Access",
     "date_published": "2026-09-30",
     "url": "/commercialisation-proposal-discussion-review-2026-09-30.html",
     "status": "Published"
   },
   {
-    "title": "FlowFirst Brand Architecture & Go-to-Market Guide",
-    "description": "Updated brand architecture for Cambodia, Malaysia, Singapore and future markets: FlowFirst master ecosystem, ThinkFlowFirst education, FlowCare navigation, FlowClub selected physical locations, FlowFirst Certified Partners, program families, NOVO/IGDS, and RAHO origin story.",
+    "title": "PhysioCam × AFW Sanctuary / FlowFirst — Partnership Proposal",
+    "description": "Two-pronged partnership proposal for residential stroke recovery and potential FlowFirst-supported services at PhysioCam.",
+    "category": "Partnerships",
+    "date_published": "2026-09-29",
+    "url": "/physiocam-afw-flowfirst-partnership-2026-09-29.html",
+    "status": "Published"
+  },
+  {
+    "title": "FlowFirst Brand Architecture — 29 September 2026 — Previous / supporting version",
+    "description": "Current FlowFirst brand architecture for stakeholders and marketing teams.",
     "category": "Brand",
     "date_published": "2026-09-29",
     "url": "/flowfirst-brand-architecture-2026-09-29.html",
-    "status": "Published"
+    "status": "Previous / supporting"
   },
   {
-    "title": "FlowFirst Brand Architecture & Go-to-Market Guide — Previous Version",
-    "description": "Superseded 28 September 2026 version retained for reference. This version used FlowFirst Connect for navigation and FlowFirst Center for physical locations before FlowCare and FlowClub were restored into the architecture.",
-    "category": "Brand",
-    "date_published": "2026-09-28",
-    "url": "/flowfirst-brand-architecture-guide.html",
-    "status": "Superseded"
-  },
-  {
-    "title": "Demand Acquisition Framework",
-    "description": "Performance-based acquisition, strategic channel partnerships, selective funded acquisition, FlowFirst-owned acquisition, and the implementation playbook.",
-    "category": "Acquisition",
+    "title": "FlowFirst Demand Acquisition Framework — Previous / supporting version",
+    "description": "FlowFirst stakeholder and marketing framework for phased demand acquisition.",
+    "category": "Marketing",
     "date_published": "2026-09-28",
     "url": "/demand-acquisition-framework.html",
-    "status": "Published"
+    "status": "Previous / supporting"
   },
   {
-    "title": "CPQL Agency Pilot Implementation Plan",
-    "description": "30-day operating plan for testing performance-based lead-generation partners for Cambodia stroke recovery, including qualification rules, agency shortlist, scorecard, outreach brief, and scale/stop decisions.",
-    "category": "Acquisition",
+    "title": "FlowFirst CPQL Agency Pilot Implementation Plan",
+    "description": "30-day implementation plan for testing cost-per-qualified-lead and performance patient-acquisition partners for FlowFirst stroke recovery in Cambodia.",
+    "category": "Marketing",
     "date_published": "2026-09-28",
     "url": "/cpql-agency-pilot-implementation-plan.html",
     "status": "Published"
+  },
+  {
+    "title": "FlowFirst Brand Architecture & Go-to-Market Guide — Previous / supporting version",
+    "description": "Updated FlowFirst brand architecture for stakeholders and marketing teams across Cambodia, Malaysia, Singapore and future markets.",
+    "category": "Brand",
+    "date_published": "2026-09-28",
+    "url": "/flowfirst-brand-architecture-guide.html",
+    "status": "Previous / supporting"
   }
 ]
