@@ -8,7 +8,7 @@ const root = __dirname;
 
 app.use(express.json({ limit: '256kb' }));
 const crmServerStartedAt = new Date().toISOString();
-app.get('/api/crm-version', (_req, res) => res.json({version:'1.5',serverStartedAt:crmServerStartedAt}));
+app.get('/api/crm-version', (_req, res) => res.json({version:'1.6',serverStartedAt:crmServerStartedAt}));
 
 function fullLead(body) {
   const a = body && typeof body.answers === 'object' && body.answers ? body.answers : {};
