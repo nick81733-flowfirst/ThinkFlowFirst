@@ -99,7 +99,7 @@ for (const file of ['app.js', 'styles.css', 'education.html', 'history.html', 'f
   app.get('/' + file, (_req, res) => res.sendFile(path.join(root, file)));
 }
 app.use('/education', express.static(path.join(root, 'education'), { index: false }));
-for (const file of ['partner-crm.html', 'kl-stroke-rehab-prospecting-framework.html']) {
+for (const file of ['partner-crm.html', 'kl-stroke-rehab-prospecting-framework.html', 'ffg-b2c-pilot-framework.html']) {
   app.get('/' + file, (_req, res) => res.sendFile(path.join(root, file)));
 }
 app.get('/responder', (_req, res) => res.sendFile(path.join(root, 'responder.html')));
