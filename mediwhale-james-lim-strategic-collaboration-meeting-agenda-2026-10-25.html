@@ -24,6 +24,34 @@ table{width:100%;border-collapse:collapse;margin:14px 0 18px;font-size:14px}th{b
 .status{font-size:12px;color:var(--muted);margin:10px 0 0}.segment{padding-bottom:10px;border-bottom:1px solid #e6eeee;margin-bottom:12px}.segment:last-of-type{border-bottom:0}
 @media(max-width:730px){.priorities{grid-template-columns:1fr}.wrap{padding:17px 13px 50px}.section,.intro{padding:21px 19px}.title-line{gap:8px}.minute{font-size:11px}table{display:block;overflow-x:auto}h2{font-size:22px}}
 @media print{@page{size:A4;margin:15mm}body{background:#fff;color:#172c39;font-size:10.5pt}.hero{background:white!important;color:#12354a;padding:12px 0 20px}.hero-inner{max-width:100%}.eyebrow{color:#0e6866}h1{font-size:27pt}.subtitle{color:#374e5b;font-size:12pt}.meta span{border:1px solid #d4dfe1;color:#3b6262}.wrap{padding:0}.intro,.section{box-shadow:none;border:0;border-top:1px solid #d0dedf;border-radius:0;padding:13px 0;margin:8px 0}.intro{border-top:0}.section{break-inside:auto}.title-line,h2,h3,.overline{break-after:avoid}.priority,.output,.note{break-inside:avoid}table{font-size:9pt}tr{break-inside:avoid}}
+
+/* Shared multi-participant discussion threads */
+.feedback{margin-top:27px;border:1px solid #b9d9d2;background:#edf6f2;border-radius:12px;padding:18px 20px}
+.feedback h3{font-size:17px;color:#185e5a;margin:0 0 4px}
+.feedback-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.feedback-note{font-size:13px;color:#52736f;margin:5px 0 12px}
+.comment-count{font-size:12px;white-space:nowrap;background:#fff;color:#27736c;border-radius:20px;padding:3px 9px}
+.comments{display:grid;gap:9px}
+.posted-comment{background:#fff;border:1px solid #d0e1dd;border-radius:9px;padding:12px 14px;overflow-wrap:anywhere;white-space:pre-wrap}
+.comment-who{font-weight:750;display:block;color:#1d4248}
+.comment-when{font-size:12px;color:#6d8287;display:block;margin-bottom:6px}
+.comment-body{font-size:14px;white-space:pre-wrap}
+.comment-form{display:grid;gap:10px;margin-top:15px}
+.comment-form label{font-size:13px;font-weight:700;color:#2f595a}
+.comment-form input,.comment-form textarea{display:block;width:100%;margin-top:5px;padding:11px 12px;border:1px solid #b2cfc9;border-radius:8px;background:#fff;color:var(--ink);font:inherit}
+.comment-form textarea{resize:vertical;min-height:82px}
+.form-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+.comment-form button{cursor:pointer;border:0;background:var(--teal);color:white;font:inherit;font-weight:700;border-radius:8px;padding:9px 16px}
+.comment-form button:disabled{opacity:.6;cursor:wait}
+.save-status{font-size:13px;color:#396962}
+.action-item{margin:17px 0;background:#fbfdfc;border:1px solid #dce8e5;border-radius:12px;padding:19px}
+.action-item h3{margin:0 0 5px;font-size:17px;color:#1a5254}
+.action-item p{font-size:14px;margin:0 0 5px;color:#435c62}
+.action-item .feedback{margin-top:15px}
+.action-num{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--teal);text-transform:uppercase;margin-bottom:5px}
+.privacy{margin:15px 0;padding:13px 16px;border-left:4px solid #138077;border-radius:6px;background:#f0f8f6;color:#385963;font-size:14px}
+@media(max-width:730px){.feedback{padding:15px 13px}.action-item{padding:15px 12px}.feedback-heading{flex-wrap:wrap}}
+@media print{.feedback{display:none}.action-item{break-inside:avoid;padding:8px 0;border:0;border-top:1px solid #dce8e5}.action-item h3{font-size:12pt}.privacy{font-size:9pt}}
 </style></head><body>
 <header class="hero"><div class="hero-inner">
 <div class="eyebrow">Strategic meeting agenda · Discussion draft · 25 October 2026</div>
@@ -47,7 +75,7 @@ table{width:100%;border-collapse:collapse;margin:14px 0 18px;font-size:14px}th{b
 <tr><td>8</td><td>Decisions and next steps</td><td>5 min</td></tr>
 <tr><th colspan="2">Total</th><th>75 min</th></tr>
 </tbody></table>
-<p class="status">Exploratory discussion only. No clinical endorsement, territory rights, partner commitments or treatment claims are implied.</p>
+<p class="privacy"><strong>Discussion enabled:</strong> Every agenda item and every proposed action below has its own shared comment thread. Enter your name and comment to contribute. Comments are visible to anyone with this link, and are not password-protected. Do not post patient data, personal contact details or confidential information.</p><p class="status">Exploratory discussion only. No clinical endorsement, territory rights, partner commitments or treatment claims are implied.</p>
 </div>
 <section class="section" id="agenda-1"><div class="overline">Agenda 01 · Global footprint</div><div class="title-line"><h2>Understanding Mediwhale's international operations</h2><span class="minute">10 minutes</span></div>
 <p class="objective"><strong>Objective:</strong> Understand the actual operational footprint and which relationships are accessible for collaboration.</p>
@@ -57,7 +85,7 @@ table{width:100%;border-collapse:collapse;margin:14px 0 18px;font-size:14px}th{b
 <li>What are actual monthly screening volumes, and what proportion of installed sites are active?</li>
 <li>What is the mix of hospitals, cardiology clinics, diabetes clinics, ophthalmology providers, screening centers and wellness-related facilities?</li>
 <li>Which countries are managed by Mediwhale directly, exclusive distributors or other partners?</li></ul>
-<div class="output"><strong>Useful takeaway:</strong> Country-level approved-product, active-site, camera, volume and partner/channel-rights summary.</div></section>
+<div class="output"><strong>Useful takeaway:</strong> Country-level approved-product, active-site, camera, volume and partner/channel-rights summary.</div><div class="feedback" id="discussion-agenda-1" data-thread="agenda-1"><div class="feedback-heading"><div><h3>Comments — Agenda 01</h3><p class="feedback-note">Which numbers, countries and channel rights should we confirm with Dr. James?</p></div><span class="comment-count" id="count-agenda-1">Loading…</span></div><div class="comments" id="comments-agenda-1"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="agenda-1"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></section>
 
 <section class="section" id="agenda-2"><div class="overline">Agenda 02 · Clinical and product roadmap</div><div class="title-line"><h2>Dr. Noon CVD, CVD Plus and Brain</h2><span class="minute">10 minutes</span></div>
 <p class="objective"><strong>Objective:</strong> Understand current validated indications, developments under investigation and any research relevance to cardiovascular and neurological health.</p>
@@ -67,47 +95,115 @@ table{width:100%;border-collapse:collapse;margin:14px 0 18px;font-size:14px}th{b
 <h3>Exploratory Advanced Flow research</h3>
 <ul><li>Could retinal AI measures be included as exploratory endpoints alongside conventional validated measurements in independently designed studies?</li><li>What would be required to test reliability, clinical meaning and any sensitivity to change over time?</li><li>Would Dr. James be open to a separate research-methods discussion with relevant clinical investigators?</li></ul>
 <div class="note caution"><strong>Scientific boundary:</strong> A Dr. Noon cardiovascular risk score does not establish that Advanced Flow is indicated or effective, and a change in AI score must not be treated as proof of treatment benefit without validation.</div>
-<div class="output"><strong>Useful takeaway:</strong> Clinical/product roadmap plus a yes/no on a separate research feasibility discussion.</div></section>
+<div class="output"><strong>Useful takeaway:</strong> Clinical/product roadmap plus a yes/no on a separate research feasibility discussion.</div><div class="feedback" id="discussion-agenda-2" data-thread="agenda-2"><div class="feedback-heading"><div><h3>Comments — Agenda 02</h3><p class="feedback-note">What clinical/product claims and research questions need clarification?</p></div><span class="comment-count" id="count-agenda-2">Loading…</span></div><div class="comments" id="comments-agenda-2"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="agenda-2"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></section>
 
 <section class="section" id="agenda-3"><div class="overline">Agenda 03 · Indonesia opportunity</div><div class="title-line"><h2>RAHO Club as a nationwide screening partner</h2><span class="minute">15 minutes</span></div>
 <p class="objective"><strong>Objective:</strong> Assess Mediwhale's interest in a potentially scalable screening partnership across Indonesia.</p>
 <p><strong>Working context from FFG:</strong> RAHO Club currently operates approximately <strong>35–40 centers</strong> across Indonesia, with an ambition to reach <strong>100 by 2027</strong>. These are reported network figures and an expansion target, not confirmed Mediwhale deployment commitments.</p>
 <p class="callout">Could existing RAHO Club relationships provide Mediwhale with a ready-made channel for medically supervised cardiovascular risk screening?</p>
 <ul><li>Is Mediwhale interested in meeting RAHO leadership to evaluate a multi-location agreement?</li><li>Are Indonesian territory rights already assigned? Would Mediwhale and/or its Indonesian distributor lead the agreement?</li><li>Can RAHO facilities lawfully provide image acquisition and screening, or must a licensed clinical provider perform and interpret each service?</li><li>What cameras, software, cloud connectivity, staff training and ongoing maintenance are needed per site?</li><li>What are device acquisition or leasing costs, licensing fees and the cost of each AI interpretation? Are network-volume terms feasible?</li><li>How would clinical reporting, referrals, patient consent and data ownership be managed?</li><li>Could a <strong>3–5 site pilot</strong> establish workflow, utilization, economics and clinical acceptability before wider rollout?</li></ul>
-<div class="output"><strong>Useful takeaway:</strong> Mediwhale's initial interest, Indonesian channel contact and requirements for a joint RAHO feasibility discussion.</div></section>
+<div class="output"><strong>Useful takeaway:</strong> Mediwhale's initial interest, Indonesian channel contact and requirements for a joint RAHO feasibility discussion.</div><div class="feedback" id="discussion-agenda-3" data-thread="agenda-3"><div class="feedback-heading"><div><h3>Comments — Agenda 03</h3><p class="feedback-note">Is RAHO's Indonesia network a practical Mediwhale pilot? What needs to happen first?</p></div><span class="comment-count" id="count-agenda-3">Loading…</span></div><div class="comments" id="comments-agenda-3"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="agenda-3"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></section>
 
 <section class="section" id="agenda-4"><div class="overline">Agenda 04 · Screening access</div><div class="title-line"><h2>Free or low-cost community screening</h2><span class="minute">10 minutes</span></div>
 <p class="objective"><strong>Objective:</strong> Establish an accessible, sustainable screening model with appropriate clinical supervision.</p>
 <ul><li>Can FFG and partners run free or subsidized screening events, beginning with a potential <strong>100-person Cambodia pilot</strong>?</li><li>What would fully loaded cost per screened person be at different volumes?</li><li>Can the model be adapted to licensed clinical partners in <strong>Malaysia</strong> and <strong>Singapore</strong>?</li><li>What are the requirements for image quality, trained operators, physician review, reporting and appropriate follow-up?</li><li>Which marketing claims are permitted in each market, and who is responsible for the required authorizations?</li></ul>
-<div class="output"><strong>Useful takeaway:</strong> Indicative pilot cost structure, operating requirements and a contact for implementation.</div></section>
+<div class="output"><strong>Useful takeaway:</strong> Indicative pilot cost structure, operating requirements and a contact for implementation.</div><div class="feedback" id="discussion-agenda-4" data-thread="agenda-4"><div class="feedback-heading"><div><h3>Comments — Agenda 04</h3><p class="feedback-note">Where should we start screening and what cost or clinical requirements matter most?</p></div><span class="comment-count" id="count-agenda-4">Loading…</span></div><div class="comments" id="comments-agenda-4"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="agenda-4"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></section>
 
 <section class="section" id="agenda-5"><div class="overline">Agenda 05 · Education and demand creation</div><div class="title-line"><h2>Think Flow First as a screening demand partner</h2><span class="minute">10 minutes</span></div>
 <p class="objective"><strong>Objective:</strong> Explore whether FFG's prevention campaigns can help Mediwhale's clinical sites reach more appropriate screening participants.</p>
 <ul><li>Introduce <strong>Think Flow First</strong>: stroke awareness, cardiovascular prevention, public education, digital campaigns and personal follow-up.</li><li>Could co-branded community initiatives help clinics organize screening days and health-education sessions?</li><li>Can participating sites use standardized outreach materials and an evidence-based clinical referral pathway?</li><li>Would Mediwhale support pilot activity with education materials, equipment access, staff training or preferential screening terms?</li><li>How should separate, optional consent for Think Flow First educational follow-up be handled?</li></ul>
 <div class="note"><strong>Patient-first separation:</strong> Screening participants receive their results and clinically appropriate guidance regardless of any interest in FFG. Opting into Think Flow First information is voluntary. Screening results are not used to promote Advanced Flow as an indicated treatment.</div>
-<div class="output"><strong>Useful takeaway:</strong> Interest in a joint screening/education campaign, together with permissible claims and support options.</div></section>
+<div class="output"><strong>Useful takeaway:</strong> Interest in a joint screening/education campaign, together with permissible claims and support options.</div><div class="feedback" id="discussion-agenda-5" data-thread="agenda-5"><div class="feedback-heading"><div><h3>Comments — Agenda 05</h3><p class="feedback-note">How should Think Flow First and participating clinics share campaign and follow-up responsibilities?</p></div><span class="comment-count" id="count-agenda-5">Loading…</span></div><div class="comments" id="comments-agenda-5"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="agenda-5"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></section>
 
 <section class="section" id="agenda-6"><div class="overline">Agenda 06 · Reciprocal network development</div><div class="title-line"><h2>Mediwhale's clinical network and potential FFG introductions</h2><span class="minute">10 minutes</span></div>
 <p class="objective"><strong>Objective:</strong> Explore whether selected existing clinical partners would welcome introductions to FFG for an independent evaluation of Advanced Flow.</p>
 <ul><li>Which Mediwhale-connected providers operate infusion services, preventive medicine, longevity clinics or integrative medicine practices?</li><li>Would Mediwhale be comfortable asking selected providers whether they want an introductory discussion with FFG?</li><li>Which markets might be realistic first: <strong>Cambodia, Malaysia or Singapore</strong>, then others with suitable clinical and regulatory pathways?</li><li>Could both parties introduce new suitable healthcare institutions to one another?</li><li>How would introductions, roles, conflicts of interest and commercial incentives be governed?</li></ul>
 <div class="note caution"><strong>Boundary:</strong> No partner should be asked to offer Advanced Flow unless the applicable regulatory status, clinical evidence, quality, safety and professional obligations have been independently reviewed. Mediwhale's technology approvals do not authorize Advanced Flow.</div>
-<div class="output"><strong>Useful takeaway:</strong> Two or three voluntary introduction candidates and a process for further assessment.</div></section>
+<div class="output"><strong>Useful takeaway:</strong> Two or three voluntary introduction candidates and a process for further assessment.</div><div class="feedback" id="discussion-agenda-6" data-thread="agenda-6"><div class="feedback-heading"><div><h3>Comments — Agenda 06</h3><p class="feedback-note">Which types of Mediwhale clinical partners should FFG ask to meet?</p></div><span class="comment-count" id="count-agenda-6">Loading…</span></div><div class="comments" id="comments-agenda-6"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="agenda-6"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></section>
 
 <section class="section" id="agenda-7"><div class="overline">Agenda 07 · Partnership models</div><div class="title-line"><h2>Commercial and strategic structure</h2><span class="minute">5 minutes</span></div>
 <p class="objective"><strong>Objective:</strong> Identify a practical starting structure rather than negotiating a broad agreement prematurely.</p>
 <ul><li>Preferential screening access for FFG's participating clinical partners.</li><li>Co-developed campaigns and screening programs in agreed markets.</li><li>A proposed RAHO–Mediwhale Indonesia arrangement, subject to territory rights and RAHO agreement.</li><li>Reciprocal business introductions, with clear permission, responsibilities and transparent compensation if appropriate.</li><li>Separate research collaboration, with independently agreed protocols, ethics, data governance and publication rights.</li></ul>
-<div class="output"><strong>Useful takeaway:</strong> Preferred initial workstreams, commercial decision-makers and proposed agreement route.</div></section>
+<div class="output"><strong>Useful takeaway:</strong> Preferred initial workstreams, commercial decision-makers and proposed agreement route.</div><div class="feedback" id="discussion-agenda-7" data-thread="agenda-7"><div class="feedback-heading"><div><h3>Comments — Agenda 07</h3><p class="feedback-note">What partnership structure or commercial terms should we explore next?</p></div><span class="comment-count" id="count-agenda-7">Loading…</span></div><div class="comments" id="comments-agenda-7"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="agenda-7"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></section>
 
 <section class="section" id="agenda-8"><div class="overline">Agenda 08 · Closing</div><div class="title-line"><h2>Decisions, owners and immediate next steps</h2><span class="minute">5 minutes</span></div>
 <p class="objective"><strong>Objective:</strong> Leave with clear next actions and named counterparts.</p>
-<table><thead><tr><th>Proposed action</th><th>Expected outcome</th></tr></thead><tbody>
-<tr><td>Share deployment and market-rights overview</td><td>Confirm countries, registered products, site/camera counts and channel ownership</td></tr>
-<tr><td>Provide CVD Plus / Brain development briefing</td><td>Clarify indications, validation milestones and research relevance</td></tr>
-<tr><td>Arrange RAHO exploratory call</td><td>Test interest in a 3–5-site Indonesian pilot</td></tr>
-<tr><td>Prepare Cambodia screening economics</td><td>Assess feasibility of a 100-person pilot</td></tr>
-<tr><td>Identify interested clinical providers</td><td>Consider two or three opt-in introductions</td></tr>
-<tr><td>Name both organizations' leads</td><td>Schedule a focused follow-up on agreed workstreams</td></tr>
-</tbody></table>
+<div class="action-list" aria-label="Proposed actions and comments"><div class="action-item" id="follow-up-1"><div class="action-num">Proposed action 1 of 6</div><h3>Share deployment and market-rights overview</h3><p><strong>Expected outcome:</strong> Confirm countries, registered products, site/camera counts and channel ownership</p><div class="feedback" id="discussion-action-1" data-thread="action-1"><div class="feedback-heading"><div><h3>Comments — Action 1</h3><p class="feedback-note">Discuss ownership, timeline, decision, progress or next action.</p></div><span class="comment-count" id="count-action-1">Loading…</span></div><div class="comments" id="comments-action-1"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="action-1"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></div><div class="action-item" id="follow-up-2"><div class="action-num">Proposed action 2 of 6</div><h3>Provide CVD Plus / Brain development briefing</h3><p><strong>Expected outcome:</strong> Clarify indications, validation milestones and research relevance</p><div class="feedback" id="discussion-action-2" data-thread="action-2"><div class="feedback-heading"><div><h3>Comments — Action 2</h3><p class="feedback-note">Discuss ownership, timeline, decision, progress or next action.</p></div><span class="comment-count" id="count-action-2">Loading…</span></div><div class="comments" id="comments-action-2"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="action-2"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></div><div class="action-item" id="follow-up-3"><div class="action-num">Proposed action 3 of 6</div><h3>Arrange RAHO exploratory call</h3><p><strong>Expected outcome:</strong> Test interest in a 3–5-site Indonesian pilot</p><div class="feedback" id="discussion-action-3" data-thread="action-3"><div class="feedback-heading"><div><h3>Comments — Action 3</h3><p class="feedback-note">Discuss ownership, timeline, decision, progress or next action.</p></div><span class="comment-count" id="count-action-3">Loading…</span></div><div class="comments" id="comments-action-3"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="action-3"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></div><div class="action-item" id="follow-up-4"><div class="action-num">Proposed action 4 of 6</div><h3>Prepare Cambodia screening economics</h3><p><strong>Expected outcome:</strong> Assess feasibility of a 100-person pilot</p><div class="feedback" id="discussion-action-4" data-thread="action-4"><div class="feedback-heading"><div><h3>Comments — Action 4</h3><p class="feedback-note">Discuss ownership, timeline, decision, progress or next action.</p></div><span class="comment-count" id="count-action-4">Loading…</span></div><div class="comments" id="comments-action-4"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="action-4"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></div><div class="action-item" id="follow-up-5"><div class="action-num">Proposed action 5 of 6</div><h3>Identify interested clinical providers</h3><p><strong>Expected outcome:</strong> Consider two or three opt-in introductions</p><div class="feedback" id="discussion-action-5" data-thread="action-5"><div class="feedback-heading"><div><h3>Comments — Action 5</h3><p class="feedback-note">Discuss ownership, timeline, decision, progress or next action.</p></div><span class="comment-count" id="count-action-5">Loading…</span></div><div class="comments" id="comments-action-5"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="action-5"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></div><div class="action-item" id="follow-up-6"><div class="action-num">Proposed action 6 of 6</div><h3>Name both organizations' leads</h3><p><strong>Expected outcome:</strong> Schedule a focused follow-up on agreed workstreams</p><div class="feedback" id="discussion-action-6" data-thread="action-6"><div class="feedback-heading"><div><h3>Comments — Action 6</h3><p class="feedback-note">Discuss ownership, timeline, decision, progress or next action.</p></div><span class="comment-count" id="count-action-6">Loading…</span></div><div class="comments" id="comments-action-6"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="action-6"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></div></div>
 <div class="note"><strong>Desired meeting outcome:</strong> A preliminary decision on whether to pursue (1) low-cost retinal screening pilots, (2) a RAHO Club Indonesia proposal, and (3) reciprocal clinical-network development, with clinical research treated as a distinct workstream.</div>
-</section>
-</div></body></html>
+<div class="feedback" id="discussion-agenda-8" data-thread="agenda-8"><div class="feedback-heading"><div><h3>Comments — Agenda 08</h3><p class="feedback-note">General closing discussion: priorities, agreements and unresolved issues.</p></div><span class="comment-count" id="count-agenda-8">Loading…</span></div><div class="comments" id="comments-agenda-8"><p class="feedback-note">Loading shared comments…</p></div><form class="comment-form" data-section-key="agenda-8"><label>Your name<input type="text" name="name" placeholder="Name / organization" maxlength="80" minlength="2" required autocomplete="name"></label><label>Comment or follow-up note<textarea name="comment" rows="3" maxlength="3000" minlength="3" required placeholder="Comment, suggestion, question, update or next step…"></textarea></label><div class="form-actions"><button type="submit">Post comment</button><span class="save-status" aria-live="polite"></span></div></form></div></section>
+</div><script>
+(() => {
+  "use strict";
+  const API="https://rtvdthvanvcqibtcfbbn.supabase.co/rest/v1/mediwhale_meeting_agenda_comments";
+  const KEY="sb_publishable_9uY8Xgki037ySXszkMP-CQ_-f0D-QNQ";
+  const HEADERS={"apikey":KEY,"Content-Type":"application/json"};
+  const LAST_NAME="mediwhale-agenda-commenter-name";
+  const getRememberedName=()=>{try{return localStorage.getItem(LAST_NAME)||""}catch(_){return ""}};
+  const saveName=value=>{try{localStorage.setItem(LAST_NAME,value)}catch(_){}};
+  const threads=[...document.querySelectorAll(".feedback[data-thread]")].map(n=>n.dataset.thread);
+  function renderComment(data){
+    const block=document.createElement("div");block.className="posted-comment";
+    const who=document.createElement("span");who.className="comment-who";who.textContent=data.stakeholder_name||"Reviewer";
+    const when=document.createElement("span");when.className="comment-when";
+    const d=new Date(data.created_at);when.textContent=Number.isNaN(d.valueOf())?"":d.toLocaleString();
+    const content=document.createElement("div");content.className="comment-body";content.textContent=data.comment_text||"";
+    block.append(who,when,content);return block;
+  }
+  function showComments(key,rows){
+    const target=document.getElementById("comments-"+key);
+    const count=document.getElementById("count-"+key);
+    if(!target||!count)return;
+    target.replaceChildren();
+    count.textContent=rows.length+" comment"+(rows.length===1?"":"s");
+    if(!rows.length){const empty=document.createElement("p");empty.className="feedback-note";empty.textContent="No comments yet. Be the first to contribute.";target.append(empty);}
+    else rows.forEach(x=>target.append(renderComment(x)));
+  }
+  function showUnavailable(key){
+    const target=document.getElementById("comments-"+key);const count=document.getElementById("count-"+key);
+    if(count)count.textContent="Unavailable";
+    if(target)target.textContent="Could not load comments. Please reload this page.";
+  }
+  async function loadAll(){
+    try{
+      const response=await fetch(API+"?select=section_key,stakeholder_name,comment_text,created_at&order=created_at.asc&limit=1000",{headers:HEADERS});
+      if(!response.ok)throw new Error("HTTP "+response.status);
+      const rows=await response.json();
+      threads.forEach(key=>showComments(key,rows.filter(row=>row.section_key===key)));
+    }catch(_){threads.forEach(showUnavailable);}
+  }
+  async function refreshThread(key){
+    try{
+      const url=API+"?select=section_key,stakeholder_name,comment_text,created_at&section_key=eq."+encodeURIComponent(key)+"&order=created_at.asc&limit=500";
+      const response=await fetch(url,{headers:HEADERS});
+      if(!response.ok)throw new Error("HTTP "+response.status);
+      showComments(key,await response.json());
+    }catch(_){showUnavailable(key);}
+  }
+  document.querySelectorAll("form.comment-form").forEach(form=>{
+    const key=form.dataset.sectionKey;
+    const nameEl=form.elements.namedItem("name");
+    nameEl.value=getRememberedName();
+    form.addEventListener("submit",async e=>{
+      e.preventDefault();
+      const name=nameEl.value.trim();
+      const commentEl=form.elements.namedItem("comment");
+      const content=commentEl.value.trim();
+      const status=form.querySelector(".save-status");
+      const button=form.querySelector("button");
+      if(name.length<2||content.length<3){status.textContent="Please provide your name and comment.";return;}
+      button.disabled=true;status.textContent="Saving comment…";
+      try{
+        const response=await fetch(API,{method:"POST",headers:{...HEADERS,"Prefer":"return=minimal"},body:JSON.stringify({section_key:key,stakeholder_name:name,comment_text:content})});
+        if(!response.ok)throw new Error("HTTP "+response.status);
+        saveName(name);
+        document.querySelectorAll('form.comment-form input[name="name"]').forEach(input=>input.value=name);
+        commentEl.value="";
+        status.textContent="Comment saved and shared.";
+        await refreshThread(key);
+      }catch(err){status.textContent="Could not save comment. Please try again. ("+err.message+")";}
+      finally{button.disabled=false;}
+    });
+  });
+  loadAll();
+})();
+</script></body></html>
