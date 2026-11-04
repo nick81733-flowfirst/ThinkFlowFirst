@@ -3,7 +3,8 @@ import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "./config.js";
 
 const el = id => document.getElementById(id);
 const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const db = createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY,{auth:{persistSession:true,autoRefreshToken:true}});
+const configured = !SUPABASE_URL.includes("YOUR_PROJECT") && !SUPABASE_PUBLISHABLE_KEY.includes("YOUR_PUBLIC");
+const db = configured ? createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY,{auth:{persistSession:true,autoRefreshToken:true}}) : null;
 let user=null, admin=false, documents=[], versions=[], packages=[], packageItems=[], snapshots=[], invites=[];
 const notify=(message,error=false)=>{const node=el("message");node.textContent=message;node.classList.remove("hidden");node.classList.toggle("error",error);};
 const value=id=>el(id).value.trim();
@@ -163,4 +164,5 @@ async function refreshRecipient(){
   document.querySelectorAll("[data-ack]").forEach(n=>n.onclick=()=>exec(async()=>{await logEvent(n.dataset.ack,null,"acknowledged");},"Review acknowledgment recorded."));
 }
 async function logEvent(invite_id,version_id,kind,message=null){requireOk(await db.from("portal_review_events").insert({invite_id,version_id,kind,message,created_by:user.id}));}
-init().catch(e=>notify("Portal setup error: "+e.message,true));
+if(configured){init().catch(e=>notify("Portal setup error: "+e.message,true));}
+else {notify("Setup required: connect the portal to a dedicated Supabase project before using authentication or files.",true);el("send-code").disabled=true;}
