@@ -103,7 +103,9 @@ $$;
 revoke all on function public.portal_is_admin() from public;
 revoke all on function public.portal_has_snapshot_access(uuid) from public;
 grant execute on function public.portal_is_admin() to authenticated;
+revoke execute on function public.portal_is_admin() from anon;
 grant execute on function public.portal_has_snapshot_access(uuid) to authenticated;
+revoke execute on function public.portal_has_snapshot_access(uuid) from anon;
 alter table public.portal_admins enable row level security;
 alter table public.portal_documents enable row level security;
 alter table public.portal_document_versions enable row level security;
@@ -164,10 +166,12 @@ begin
 end; $$;
 revoke all on function public.portal_capture_snapshot(uuid) from public;
 grant execute on function public.portal_capture_snapshot(uuid) to authenticated;
+revoke execute on function public.portal_capture_snapshot(uuid) from anon;
 -- Forbid in-place mutation of versions and snapshots, even by admins.
 create or replace function public.portal_block_mutation()
 returns trigger language plpgsql set search_path='' as $$
 begin raise exception 'immutable record: create a new version or snapshot'; end; $$;
+revoke execute on function public.portal_block_mutation() from public, anon, authenticated;
 create trigger portal_immutable_versions before update or delete on public.portal_document_versions
  for each row execute function public.portal_block_mutation();
 create trigger portal_immutable_snapshots before update or delete on public.portal_snapshots
