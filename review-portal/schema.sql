@@ -118,8 +118,8 @@ create policy admin_docs on public.portal_documents for all to authenticated usi
 create policy admin_versions on public.portal_document_versions for all to authenticated using (public.portal_is_admin()) with check (public.portal_is_admin());
 create policy admin_packages on public.portal_packages for all to authenticated using (public.portal_is_admin()) with check (public.portal_is_admin());
 create policy admin_items on public.portal_package_items for all to authenticated using (public.portal_is_admin()) with check (public.portal_is_admin());
-create policy admin_snapshots on public.portal_snapshots for all to authenticated using (public.portal_is_admin()) with check (public.portal_is_admin());
-create policy admin_snapshot_items on public.portal_snapshot_items for all to authenticated using (public.portal_is_admin()) with check (public.portal_is_admin());
+create policy admin_snapshots_read on public.portal_snapshots for select to authenticated using (public.portal_is_admin());
+create policy admin_snapshot_items_read on public.portal_snapshot_items for select to authenticated using (public.portal_is_admin());
 create policy admin_invites on public.portal_invites for all to authenticated using (public.portal_is_admin()) with check (public.portal_is_admin());
 create policy admin_events on public.portal_review_events for all to authenticated using (public.portal_is_admin()) with check (public.portal_is_admin());
 create policy recipient_snapshots on public.portal_snapshots for select to authenticated using (public.portal_has_snapshot_access(id));
