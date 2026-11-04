@@ -40,7 +40,7 @@ async function refreshAdmin(){
   packageItems=requireOk(await db.from("portal_package_items").select("*").order("position"));
   snapshots=requireOk(await db.from("portal_snapshots").select("*").order("captured_at",{ascending:false}));
   invites=requireOk(await db.from("portal_invites").select("*").order("created_at",{ascending:false}));
-  renderLibrary();renderPackages();renderSnapshots();
+  renderLibrary();renderPackages();renderSnapshots();await refreshAdmins();
 }
 function versionLabel(v){let doc=documents.find(d=>d.id===v.document_id);return (doc?.title||"Resource")+" · v"+v.version_no+(v.kind==="external_url"?" · LIVE EXTERNAL LINK":" · PDF/file");}
 function renderLibrary(){
@@ -132,6 +132,30 @@ function renderSnapshots(){
     el("manifest-"+id).innerHTML=rows.map(i=>`<div class="review-resource"><b>${escapeHtml(i.title_at_capture)}</b> <small class="muted">${escapeHtml(i.version_id.slice(0,8))}</small><p>${escapeHtml(i.note)}</p></div>`).join("");
   }));
 }
+
+async function refreshAdmins(){
+  const admins=requireOk(await db.rpc("portal_list_admins"));
+  el("admin-list").innerHTML=admins.map(a=>`<div class="docpick"><div style="flex:1"><strong>${escapeHtml(a.email)}</strong><p class="muted">${a.user_id===user.id?"You · ":""}Administrator since ${new Date(a.created_at).toLocaleDateString()}</p></div><button class="outline" data-remove-admin="${a.user_id}" ${admins.length<=1?"disabled":""}>Remove</button></div>`).join("")||'<p>No administrators found.</p>';
+  document.querySelectorAll("[data-remove-admin]").forEach(n=>n.onclick=()=>exec(async()=>{
+    const target=admins.find(a=>a.user_id===n.dataset.removeAdmin);
+    if(!target||!window.confirm("Revoke administrator access for "+target.email+"?"))return;
+    requireOk(await db.rpc("portal_revoke_admin",{p_user_id:target.user_id}));
+    if(target.user_id===user.id){await updateSession((await db.auth.getSession()).data.session);notify("Your administrator access has been revoked.");}
+    else {await refreshAdmins();notify("Administrator access revoked.");}
+  }));
+  const events=requireOk(await db.from("portal_admin_audit").select("*").order("occurred_at",{ascending:false}).limit(20));
+  el("admin-audit").innerHTML=events.map(e=>`<div class="docpick"><span>${escapeHtml(e.action)} · ${new Date(e.occurred_at).toLocaleString()} · ${escapeHtml(e.target_id.slice(0,8))}</span></div>`).join("")||'<p class="muted">No changes yet.</p>';
+}
+el("add-admin").onclick=()=>exec(async()=>{
+  const email=value("new-admin-email").toLowerCase();
+  if(!email||!el("new-admin-email").checkValidity())throw new Error("Enter a valid email address.");
+  if(!window.confirm("Grant full administrator access to "+email+"?"))return;
+  requireOk(await db.rpc("portal_grant_admin",{p_email:email}));
+  el("new-admin-email").value="";
+  await refreshAdmins();
+  notify("Administrator access granted to "+email+".");
+});
+
 async function refreshRecipient(){
   const myEmail=user.email?.toLowerCase()||"";
   const mine=requireOk(await db.from("portal_invites").select("*").eq("email",myEmail).is("revoked_at",null).gt("expires_at",new Date().toISOString()));
