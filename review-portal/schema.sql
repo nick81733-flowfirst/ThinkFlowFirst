@@ -31,8 +31,9 @@ create table if not exists public.portal_document_versions (
  or (kind='external_url' and external_url is not null and storage_path is null)
  )
 );
-create unique index if not exists portal_one_binary_per_hash
+create index if not exists portal_binary_hash_lookup
  on public.portal_document_versions (sha256) where sha256 is not null;
+-- Multiple version records may reuse the same SHA-256 / storage object.
 create table if not exists public.portal_packages (
  id uuid primary key default gen_random_uuid(),
  name text not null,
